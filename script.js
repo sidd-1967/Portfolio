@@ -40,6 +40,7 @@
 
 
 // Contact US Script!
+// Contact US Script!
 function sendMessage() {
   // Get form input values
   var name = document.getElementById('name').value;
@@ -49,11 +50,16 @@ function sendMessage() {
 
   // Check if all fields are filled
   if (name !== '' && email !== '' && phone !== '' && message !== '') {
+    // Clear form fields
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+
     // Display success alert if all fields are filled
     Swal.fire({
       icon: 'success',
-    //   title: 'Success',
-      text: "Hey there! Thanks for reaching out to Me. We'll get back to you as soon as I can.",
+      text: "Hey there! Thanks for reaching out to me. We'll get back to you as soon as possible.",
       showConfirmButton: false,
       timer: 5000,
       customClass: {
@@ -63,16 +69,13 @@ function sendMessage() {
       }
     });
 
-    // Clear form fields
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('message').value = '';
+    // Open mail app or window
+    var emailLink = 'mailto:siddheshgovalar1967@gmail.com?subject=Contact%20Form%20Submission&body=Name: ' + encodeURIComponent(name) + '%0D%0AEmail: ' + encodeURIComponent(email) + '%0D%0APhone: ' + encodeURIComponent(phone) + '%0D%0AMessage: ' + encodeURIComponent(message);
+    window.open(emailLink, '_blank');
   } else {
     // Display error alert if any of the fields is empty
     Swal.fire({
       icon: 'error',
-    //   title: 'Error',
       text: 'Please fill in all the required fields.',
       showConfirmButton: false,
       timer: 3000,
@@ -83,7 +86,6 @@ function sendMessage() {
       }
     });
   }
-
 
   // Prevent the default form submission behavior
   event.preventDefault();

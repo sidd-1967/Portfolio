@@ -86,9 +86,12 @@
           <div class="left-side">
             <h3><i class="fas fa-graduation-cap"></i> Education</h3>
             <ul>
-              <li>Master of Computer Application &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                  Lovely Professional University &nbsp;&nbsp;&nbsp;&nbsp;
+              <li>
+                Master of Computer Application &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                <!-- <img src="images/lpu-logo.jpeg" alt="Image description" width="20px" height="20px"> -->
+                Lovely Professional University &nbsp;&nbsp;&nbsp;&nbsp;
               </li>
+              
               <li>Bachelor in Computer Science&nbsp;&nbsp;&nbsp;&nbsp;<br>
                   Nirmala Memorial Foundation College of Commerce and Science &nbsp;&nbsp;&nbsp;&nbsp;
               </li>
@@ -289,17 +292,17 @@
       <br>
       </section>
       <section>
-      <div id="contact">
-        <h2>Contact Me</h2>
-        <form>
-          <input type="text" id="name" name="name" placeholder="Your Name" maxlength="50">
-          <input type="email" id="email" name="email" placeholder="Your Email" maxlength="50">
-          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" pattern="[6-9][0-9]{9}" maxlength="10">
-          <textarea id="message" name="message" placeholder="Your Message" maxlength="250"></textarea>
-          <button id="sendBtn" onclick="sendMessage()">Send Message</button>
-        </form>
-      </div>      
-    </section>
+        <div id="contact">
+          <h2>Contact Me</h2>
+          <form action="mailto:siddheshgovalkar1967@gmail.com" method="post" enctype="text/plain">
+            <input type="text" id="name" name="name" placeholder="Your Name" maxlength="50" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" maxlength="50" required>
+            <input type="text" id="phone" name="phone" placeholder="Your Phone Number" pattern="[6-9][0-9]{9}" maxlength="10">
+            <textarea id="message" name="message" placeholder="Your Message" maxlength="250" required></textarea>
+            <button id="sendBtn">Send Message</button>
+          </form>
+        </div>      
+      </section>      
     <footer>
         <div class="container">
             &copy; 2023 My Portfolio
