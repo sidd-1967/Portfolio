@@ -1,0 +1,809 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffeb3b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffeb3b;
+}
+
+
+/* Header CSS */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo img {
+  height: auto;
+  padding-left: 45px;
+  order: 1;
+  height: auto;
+  max-width: 250px;
+}
+
+nav {
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 30px;
+  
+}
+
+nav .menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: fantasy;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .logo img {
+    width: 250px;
+    padding-left: 1px; /* Adjust the logo size as needed */
+  }
+  .header .logo {
+    margin: 0;
+    padding: 8px 0; /* Adjust the padding values as needed */
+  }
+  
+  .header .menu li {
+    padding: 8px 0; /* Adjust the padding values as needed */
+  }
+  .menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
+  }
+  
+  .menu.active {
+    display: block;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+  }
+}
+
+/* Header CSS Ends Here */
+/* Main Body */
+
+/*  <section id="welcome"> */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: #fff;
+    position: relative;
+}
+
+#welcome {
+    background-color: transparent;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#welcome .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#welcome .text {
+  flex: 1;
+  text-align: left;
+  font-family: fantasy;
+  color: white;
+}
+
+#welcome .image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-text {
+    font-size: 18px;
+    cursor: default;
+}
+
+.title {
+    background-color: silver;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.name {
+    font-size: 80px;
+    letter-spacing: -1px;
+}
+
+.designation {
+    font-size: 30px;
+}
+
+.designation::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/designation.png);
+    background-size: cover;
+    margin-right: 5px;
+    
+}
+
+.email a,
+.phone a {
+  color: white;
+  text-decoration: none;
+  font-family: 'poppins',sans-serif;
+}
+
+.social-icons.d-flex {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons.d-flex li {
+    margin-right: 30px;
+    margin-top: 40px;
+    
+
+  }
+  
+  .social-icons.d-flex li:last-child {
+    margin-right: 0;
+    
+  }
+  
+  .social-icons.d-flex li i {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    
+  }
+  
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.QAimage img {
+  /* box-shadow: 0px 0px 30px; */
+  border-radius: 20%;
+  max-width: 100%;
+  height: auto;
+  padding-left: 130px;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.hero-subtext {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .QAimage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+    padding-top: 30px;
+  }
+  
+  .QAimage img {
+    max-width: 100%;
+    height: auto;
+    padding-left: 5px;
+  }
+  
+  .menu {
+    display: none;
+  }
+}
+
+/* About Me CSS STARTS HERE */
+#about .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-right: 40px;
+}
+
+.about-content .image {
+  flex: 1;
+  margin-left: 90px;
+}
+
+.about-content .text {
+  flex: 1;
+}
+
+.about-Education {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-Education {
+  display: flex;
+}
+
+/* Left Side (Education) */
+.left-side {
+  flex: 1;
+}
+
+.left-side h3 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+  margin-right: 150px;
+}
+
+.left-side h3 i {
+  margin-right: 10px;
+}
+
+.left-side ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Right Side (Interests) */
+.right-side {
+  flex: 1;
+}
+
+.right-side h3 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+  margin-left: 15px;
+}
+
+.right-side h3 i {
+  margin-right: 10px;
+}
+
+.right-side ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin: 0;
+}
+
+.about-container {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .about-content .image {
+    margin-bottom: 20px;
+  }
+
+  .about-content .about-text {
+    margin: 0 auto;
+    max-width: 450px;
+    text-align: center;
+  }
+
+  .about-Education,
+  .about-Education .left-side,
+  .about-Education .right-side {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-Education .left-side h3,
+  .about-Education .right-side h3 {
+    margin: 0;
+    margin-bottom: 40px; /* Adjust spacing between pointer dot and text */
+  }
+
+  .about-Education .left-side ul,
+  .about-Education .right-side ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+
+/* About US CSS ENDS HERE */
+
+
+
+/* SKILLS CSS STARTS HERE */
+.skills {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  margin: 0 10px;
+  margin-bottom: 30px;
+}
+
+.skills li span {
+  border: 1px solid #0bceaf;
+  padding: 7px 40px;
+  border-radius: 66px;
+  display: inline-block;
+  margin-bottom: 4px;
+  white-space: normal;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  text-align: center;
+  max-width: 180px;
+  line-height: 1.2;
+}
+
+.skills li {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills li img {
+  margin-bottom: 20px;
+}
+
+.skills li span {
+  max-width: 105px;
+  text-align: center; /* Center align the text */
+  max-height: 100% !important;
+}
+
+/* SKILLS CSS ENDS HERE */
+
+/* Projects CSS Starts here */
+.project-heading {
+  text-align: center;
+}
+
+.project {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 30px;
+}
+
+.screenshots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.screenshots-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.screenshots img {
+  flex: 0 0 33.33%;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin: 0 5px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+/* Projects CSS Ends here */
+
+/* Certificates CSS Starts here */
+#certificates {
+  background-color: black;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.project-heading {
+  color: white;
+  margin-bottom: 45px;
+}
+
+.certificate {
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.certificate-box {
+  width: 400px;
+  height: 250px;
+  margin: 25px;
+  background-color: #333333;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  
+}
+
+.certificate-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .certificate-box {
+    width: 300px;;
+    height: 200px;
+  }
+}
+
+/* Certificates CSS Ends here */
+/* Work Experience CSS Starts Here */
+
+#clients {
+  background-color: black;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#clients h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.company-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  width: 400px;
+  margin: 25px;
+}
+
+.company-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.company-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.company-info {
+  padding: 4px;
+  color: white;
+  text-align: center;
+}
+
+.company-info h3 {
+  margin-bottom: 5px;
+}
+
+.company-info p {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .company {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/* Work Experience CSS Ends Here */
+
+/* Contact ME Form  */
+#contact {
+    background-color: transparent;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#contact h2 {
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 120px;
+}
+
+button {
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ffeb3b;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.custom-container-class {
+  width: 20px;
+  height: 10px;
+}
+
+@media (max-width: 480px) {
+    #contact form {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+}
+
+button:hover {
+    background-color: #ffeb3b;
+}
+
+footer {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ffeb3b;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+
+
+/*  Scroll To Top Button Starts Here  */
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0.5;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  line-height: 50px;
+  z-index: 9999;
+  background-image: url("images/chevron-up-solid.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#scrollToTopButton:hover {
+  opacity: 1;
+}
+#scrollToTopButton:before {
+  content: "\f062"; /* Font Awesome arrow-up icon code */
+  font-family: "Font Awesome"; /* Replace with the font-family of your icon font */
+  font-weight: bold;
+}
+/*  Scroll To Top Button Ends Here  */
+
+/* Form Sweat alerts pop-up CSS Starts Here */
+
+.custom-popup-class {
+  background-color: black;
+  color: gold;
+}
+
+.custom-title-class {
+  color: gold;
+}
+
+.custom-content-class {
+  color: gold;
+}
+
+
+/* Form Sweat alerts pop-up CSS Ends Here */
