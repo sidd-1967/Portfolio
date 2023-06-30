@@ -1,19 +1,55 @@
-//  hamburger menu  Working
-// document.addEventListener('DOMContentLoaded', function() {
-//   const hamburgerMenu = document.querySelector('.hamburger-menu');
-//   const menu = document.querySelector('.menu');
-//   const overlay = document.querySelector('.blurred-background');
+// hamburger menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburgerMenu = document.querySelector('.sidemenu-toggler');
+  var sidemenu = document.querySelector('.sidemenu');
+  var closeBtn = document.querySelector('.sidemenu .close');
+  var headerLinks = document.querySelectorAll('header .menu li a'); // Select all header links
+
+  hamburgerMenu.addEventListener('click', function() {
+    sidemenu.classList.add('open');
+    document.body.classList.add('menu-open');
+  });
+
+  closeBtn.addEventListener('click', function() {
+    sidemenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  });
+
+  // Close side menu when clicking outside the side menu
+  document.addEventListener('click', function(event) {
+    if (!sidemenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+      sidemenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    }
+  });
+});
+
+
+  //  Fixed header Scroll Mobile View Functionality
   
-//   hamburgerMenu.addEventListener('click', function() {
-//     menu.classList.toggle('show');
-//     overlay.classList.toggle('show');
-//   });
-  
-//   overlay.addEventListener('click', function() {
-//     menu.classList.remove('show');
-//     overlay.classList.remove('show');
-//   });
-// });
+  let prevScrollpos = window.pageYOffset;
+  const header = document.querySelector("header");
+  const logoImage = document.getElementById("logo-image");
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+
+    if (prevScrollpos > currentScrollPos) {
+      // Scrolling up
+      header.classList.add("sticky");
+      logoImage.classList.remove("hide");
+      hamburgerMenu.classList.add("hide");
+    } else {
+      // Scrolling down
+      header.classList.remove("sticky");
+      logoImage.classList.add("hide");
+      hamburgerMenu.classList.remove("hide");
+    }
+
+    prevScrollpos = currentScrollPos;
+  };
+
 
 // Add auto Scroll Functionality for Project Images if they are Uploaded more than 3.
   function rotateImages() {
