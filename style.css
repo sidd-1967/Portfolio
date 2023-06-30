@@ -306,7 +306,7 @@ body {
 
 #welcome {
     background-color: transparent;
-    padding: 150px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -357,9 +357,9 @@ body {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url(images/designation.png);
+    background-image: url(images/designationicon.png);
     background-size: cover;
-    margin-right: 5px;
+    margin-right: 14px;
     
 }
 
@@ -407,6 +407,7 @@ body {
   max-width: 100%;
   height: auto;
   padding-left: 130px;
+  
 }
 
 .logo {
@@ -468,10 +469,39 @@ body {
     max-width: 100%;
     height: auto;
     padding-left: 5px;
+    border-radius: 20px; /* Add border radius */
+    box-shadow: 0px 0px 20px; /* Set the box shadow */
   }
   
   .menu {
     display: none;
+  }
+  .title {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px 15px;
+  }
+
+  .name {
+    font-size: 45px;
+  }
+
+  .designation::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/designationicon.png);
+    background-size: cover;
+    margin-right: 14px;
+  }
+
+  .social-icons.d-flex li {
+    margin-top: 15px;
+  }
+
+  .social-icons.d-flex li i {
+    font-size: 20px;
   }
 }
 
@@ -503,8 +533,12 @@ body {
 .about-content .image {
   flex: 1;
   margin-left: 90px;
+  
 }
-
+.about-content .image img {
+  border-radius: 20%;
+  box-shadow: 0px 0px 20px;
+}
 .about-content .text {
   flex: 1;
 }
@@ -566,7 +600,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Styles for mobile view */
 @media (max-width: 768px) {
+  #about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .about-content {
     display: flex;
     flex-direction: column;
@@ -577,7 +620,17 @@ body {
 
   .about-content .image {
     margin-bottom: 20px;
-    position: relative;
+    /* position: relative; */
+    overflow: visible;
+    margin: 0 auto; /* Align the image in the center */
+  }
+
+  .about-content .image img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 20px; /* Add border radius */
+    box-shadow: 0px 0px 20px; /* Set the box shadow */
+    margin-top: 50px; /* Add a negative margin to lift the image up and show the full box shadow */
   }
 
   .about-content .about-text {
@@ -612,7 +665,6 @@ body {
 }
 
 /* About US CSS ENDS HERE */
-
 
 
 /* SKILLS CSS STARTS HERE */
