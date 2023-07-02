@@ -1,18 +1,45 @@
 // hamburger menu Functionality
+// document.addEventListener('DOMContentLoaded', function() {
+//   var hamburgerMenu = document.querySelector('.sidemenu-toggler');
+//   var sidemenu = document.querySelector('.sidemenu');
+//   var closeBtn = document.querySelector('.sidemenu .close');
+//   var headerLinks = document.querySelectorAll('header .menu li a'); // Select all header links
+
+//   hamburgerMenu.addEventListener('click', function() {
+//     sidemenu.classList.add('open');
+//     document.body.classList.add('menu-open');
+//   });
+
+//   closeBtn.addEventListener('click', function() {
+//     sidemenu.classList.remove('open');
+//     document.body.classList.remove('menu-open');
+//   });
+
+//   // Close side menu when clicking outside the side menu
+//   document.addEventListener('click', function(event) {
+//     if (!sidemenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+//       sidemenu.classList.remove('open');
+//       document.body.classList.remove('menu-open');
+//     }
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
   var hamburgerMenu = document.querySelector('.sidemenu-toggler');
   var sidemenu = document.querySelector('.sidemenu');
   var closeBtn = document.querySelector('.sidemenu .close');
-  var headerLinks = document.querySelectorAll('header .menu li a'); // Select all header links
+  var headerLinks = document.querySelectorAll('header .menu li a');
 
   hamburgerMenu.addEventListener('click', function() {
-    sidemenu.classList.add('open');
-    document.body.classList.add('menu-open');
+    sidemenu.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+    hamburgerMenu.classList.toggle('open');
   });
 
   closeBtn.addEventListener('click', function() {
     sidemenu.classList.remove('open');
     document.body.classList.remove('menu-open');
+    hamburgerMenu.classList.remove('open');
   });
 
   // Close side menu when clicking outside the side menu
@@ -20,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!sidemenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
       sidemenu.classList.remove('open');
       document.body.classList.remove('menu-open');
+      hamburgerMenu.classList.remove('open');
     }
   });
 });
