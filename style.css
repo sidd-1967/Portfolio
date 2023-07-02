@@ -170,7 +170,7 @@ cursor: pointer;
     width: 40px;
     height: 40px;
     background-color: black;
-    position: fixed;
+    position: sticky;
     top: 55px;
     right: 20px;
     cursor: pointer;
@@ -221,19 +221,29 @@ cursor: pointer;
   }
 }
 
-/* Mobile View header - Fixed position when scrolling up */
-header {
-  position: relative;
-  top: 0;
-  z-index: 999;
-  background-color: #000000; /* Add your preferred background color for the sticky header */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow if desired */
-  transition: top 0.3s ease-in-out; /* Add a smooth transition effect for the hiding/showing animation */
+@media (max-width: 767px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #000000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out; 
+  }
+
+  /* Hide the sticky header when scrolling down */
+  header.sticky {
+    top: -100px; /* Adjust this value as needed to hide the header completely */
+  }
 }
 
-/* Hide the sticky header when scrolling down */
-header.sticky {
-  top: -100px; /* Adjust this value as needed to hide the header completely */
+/* Desktop View header */
+@media (min-width: 768px) {
+  header {
+    position: relative; 
+    top: 0; 
+    box-shadow: none; 
+  }
 }
 
 .sidemenu nav ul {
