@@ -921,6 +921,35 @@ body {
 }
 /* Work Experience CSS Ends Here */
 
+/* Download Resume Button CSS Starts here */
+#resume-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#resume-button a {
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #ffeb3b;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+#resume-button a:hover {
+  background-color: #ffeb3b;
+}
+/* Download Resume Button CSS Ends here */
+
+
+
+
+
+
 /* Contact ME Form  */
 #contact {
     background-color: transparent;
