@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Contact US Script!
-// Contact US Script!
 function sendMessage() {
   // Get form input values
   var name = document.getElementById('name').value;

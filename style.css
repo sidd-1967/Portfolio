@@ -928,7 +928,7 @@ body {
 }
 
 #resume-button a {
-  width: 100%;
+  display: inline-block;
   background-color: transparent;
   color: #fff;
   border: 2px solid #ffeb3b;
@@ -938,16 +938,39 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
+#resume-button a .button-text {
+  display: block;
+}
+
+#resume-button a .dot-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
 #resume-button a:hover {
   background-color: #ffeb3b;
 }
+#resume-button a.downloading .button-text {
+  display: none;
+}
+
+#resume-button a.downloading .dot-spinner {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #resume-button a {
+    width: auto;
+  }
+}
 /* Download Resume Button CSS Ends here */
-
-
-
-
 
 
 /* Contact ME Form  */
