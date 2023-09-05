@@ -1,358 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
     <script src="js/script.js"></script>
-  </head>
-
-<!--  header Code  -->
-<header>
-  <div class="logo">
-    <img src="images/logo1.webp" alt="Logo">
-  </div>
-  <nav>
-    <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#myskills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#clients">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- Mobile View Side Menu -->
-  <a href="javascript:void(0);" class="sidemenu-toggler">
-    <span></span>
-    <span></span>
-    <span></span>
-</a>
-<div class="sidemenu">
-  <a href="javascript:void(0);" class="close"></a>
-  <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#myskills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#clients">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-  </nav>
-  <footer>
-    <ul class="social-icons d-flex">
-      <li><a href="https://wa.me/918070506024" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/siddhesh-govalkar-b65a43228/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://www.instagram.com/_siddhesh.0502_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    </ul>
-    <a href="tel:+91 8070506024" class="call-me-button">Call Me</a>
-  </footer>
-</div>
-</header>
-
+</head>
 <body>
-  <section id="welcome">
-      <div class="container">
-          <div class="text">
-              <span class="title">Hello I'm </span><br>
-              <span class="name">SIDDHESH D. GOVALKAR</span><br>
-              <span class="designation">Test Engineer</span>
-              <br>
-          </div>
-          <div class="QAimage">
-              <img src="images/QA.webp" alt="Portfolio Image"/>
-          </div>
-      </div>
-</section>
-<section id="about">
-<div class="about-container">
-  <div class="about-content">
-    <div class="image">
-      <img src="images/hero.webp" alt="Profile_Image">
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="img/logo2.png" alt="" style="width: 70%; margin-left:8px">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-8" id="home">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="#home" href="index.html">home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#skills">Skills</a></li>
+                                        <li><a href="#project">Projects</a></li>
+                                        <li><a href="#experience">Experience</a></li>
+                                        <li><a href="#contact_me">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                            <div class="social_media_links">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Home page start -->
+    <div class="slider_area ">
+        <div class="slider_area_inner slider_bg_1 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div class="single_slider">
+                            <div class="slider_text">
+                                <h3>SIDDHESH <br>
+                                    DHANANJAY GOVALKAR</h3>
+                                <p>Test Engineer at DgNote Technologies </p>
+                                <a href="https://github.com/sidd-1967/Portfolio/raw/main/Resume/siddhesh-resume.pdf" class="boxed-btn4 ">Download CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I am a Test Engineer with strong programming skills in Python, SQL, JavaScript & Selenium. I excel in automation testing, ensuring software quality & efficiency. I also conduct thorough manual testing, tracking defects diligently.
-      </p>
-      <p>
-        Moreover, my expertise extends to API load testing. I believe in effective communication & teamwork. Always eager to learn, I stay updated with the latest testing trends, delivering innovative solutions for superior software quality.
-      </p>
-      <br>
-      <div class="about-Education">
-        <div class="left-side">
-          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-          <ul>
-            <li>
-              Master of Computer Application &nbsp;&nbsp;&nbsp;&nbsp;<br>
-              <!-- <img src="images/lpu-logo.jpeg" alt="Image description" width="20px" height="20px"> -->
-              Lovely Professional University &nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
-            
-            <li>Bachelor in Computer Science&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                Nirmala Memorial Foundation College of Commerce and Science &nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
-            <li>HSC &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                Navjeevan JR College of Commere and Science &nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
-            <li>SSC &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                St Lawrance High School &nbsp;&nbsp;&nbsp;&nbsp;              
-            </li>
-          </ul>
+    <!-- Home page_end -->
+    <!-- about me _start  -->
+    <div class="about_area" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <img src="img/manager.png" alt="">
+                        </div>
+                        <h3>Skilled Test Engineer<br>
+                            </h3>
+                            <p>I am a Test Engineer with strong programming skills in Python, SQL & Selenium. 
+                                <br> I excel in automation testing, ensuring software quality & efficiency. I also conduct thorough manual testing, tracking defects diligently. 
+                                <br> Moreover, my expertise extends to API load testing. 
+                                <br>  I believe in effective communication & teamwork. Always eager to learn, I stay updated with the latest testing trends, delivering innovative solutions for superior software quality.
+                            </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="single_about_info text-center">
+                        <div class="about_thumb">
+                            <div class="image_hover">
+                                <div class="hover_inner">
+                                    <img src="img/img2.jpeg" alt="" style="border-radius: 50%; object-fit: fill;">
+                                </div>
+                            </div>
+                        </div>
+                        <h3>More About me</h3>
+                        <p>I really love playing video games and sharing them with others on live streams,
+                            <br> Besides that, I'm into staying fit and healthy, and I'm a big fan of music.
+                            <br> I believe in enjoying life and expressing creativity, whether I'm gaming or pursuing other interests.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
-        <div class="right-side">
-          <h3><i class="far fa-heart"></i> Interests</h3>
-          <ul>
-            <li>Gaming</li>
-            <li>Live Streaming</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
-</section>
-<section id="myskills">
-<div class="skills">
-  <h2>Programming Skills</h2>
-  <ul>
-    <li>
-      <div class="skill-box">
-        <img src="images/pythonlogo.webp" alt="Python Icon" style="width: 50%;">
-        <span>Python</span>
-      </div>
-    </li>
-    <li>
-      <div class="skill-box">
-        <img src="images/selenium.webp" alt="Selenium Icon"style="width: 50%;">
-        <span>Selenium</span>
-      </div>
-    </li>
-    <li>
-      <div class="skill-box">
-        <img src="images/SQL.webp" alt="SQL Icon" style="width: 50%;">
-        <span>SQL</span>
-      </div>
-    </li>
-    <li>
-      <div class="skill-box">
-        <img src="images/apitesting.webp" alt="API Testing Icon" style="width: 50%;">
-        <span>API Testing</span>
-      </div>
-    </li>
-    <li>
-      <div class="skill-box">
-        <img src="images/automationtesting.webp" alt="Automation Testing Icon" style="width: 50%; border-radius: 20%;" >
-        <span>Automation</span>
-      </div>
-    </li>
-  </ul>
-</div>
-</section>
-<section id="myskills">
-<div class="skills">
-  <div class="skills">
-    <h2>QA Skills</h2>
-    <ul>
-      <li>
-        <div class="skill-box">
-          <img src="images/Manual Testing.webp" alt="ManualTesting" style="width: 50%; border-radius: 35%;">
-          <span>Manual Testing</span>
-        </div>
-      </li>
-      <li>
-        <div class="skill-box">
-          <img src="images/Test Case Creation.webp" alt="Test_Case_Creation" style="width: 50%; border-radius: 35%;">
-          <span>Test Case Creation</span>
-        </div>
-      </li>
-      <li>
-        <div class="skill-box">
-          <img src="images/Test Execution.webp" alt="Test_Execution" style="width: 50%; border-radius: 35%;">
-          <span>Test Execution</span>
-        </div>
-      </li>
-      <li>
-        <div class="skill-box">
-          <img src="images/Defect Tracking.webp" alt="Defect_Tracking" style="width: 50%; border-radius: 35%;">
-          <span>Defect Tracking</span>
-        </div>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <div class="skill-box">
-          <img src="images/Test Management Systems.webp" alt="Test_Management_Systems" style="width: 50%; border-radius: 35%;">
-          <span>Test Management Systems</span>
-        </div>
-      </li>
-      <li>
-        <div class="skill-box">
-          <img src="images/Bug Tracking Systems.webp" alt="Bug_Tracking_Systems" style="width: 50%; border-radius: 35%;">
-          <span>Bug Tracking Systems</span>
-        </div>
-      </li>
-      <li>
-        <div class="skill-box">
-          <img src="images/Automation Frameworks (e.g., Selenium).webp" alt="Automation_Framework" style="width: 50%; border-radius: 35%;">
-          <span>Automation Frameworks (E.g.Selenium)</span>
-        </div>
-      </li>
-      <li>
-        <div class="skill-box">
-          <img src="images/SDLC.webp" alt="SDLC" style="width: 50%; border-radius: 35%;">
-          <span>Software Development Life Cycle</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-<section id="certificates">
-<div class="container">
-  <h2 class="project-heading">Certification</h2>
-  <div class="certificate">
-    <div class="certificate-images">
-      <div class="certificate-box">
-        <img src="images/certificate_python.webp" alt="Certificate 1">
-      </div>
-      <div class="certificate-box">
-        <img src="images/certificate_C.webp" alt="Certificate 2">
-      </div>
-      <div class="certificate-box">
-        <img src="images/udemy1.jpg" alt="Certificate 3">
-      </div>
-      <div class="certificate-box">
-        <img src="images/udemy2.jpg" alt="Certificate 4">
-      </div>
-    </div>
-  </div>
-</div>
-</section>
+    <!-- about me _end -->
 
+    <!-- Education start -->
+    <div class="practice_area" id="Education" >
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_title text-center mb-60">
+                            <h3>Education</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="single_practice">
+                            <div class="practice_image">
+                                <img src="img/lpu-logo.png" alt="">
+                            </div>
+                            <div class="practice_hover text-center">
+                                <div class="hover_inner">
+                                    <i class="flaticon-case"></i>
+                                    <h3>MCA</h3>
+                                    <p>Master of Computer Application</p> 
+                                    <p>Lovely Professional University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="single_practice">
+                            <div class="practice_image">
+                                <img src="img/nmfc-logo.png" alt="">
+                            </div>
+                            <div class="practice_hover text-center">
+                                <div class="hover_inner">
+                                    <i class="flaticon-courthouse"></i>
+                                    <h3>BSC CS</h3>
+                                    <p>Bachelor of Computer Science</p> 
+                                    <p>Nirmala Memorial Foundation College of Commerce and Science</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="single_practice">
+                            <div class="practice_image">
+                                <img src="img/hsc-logo.png" alt="">
+                            </div>
+                            <div class="practice_hover text-center">
+                                <div class="hover_inner">
+                                    <i class="flaticon-judge"></i>
+                                    <h3>HSC</h3>
+                                    <p>Junior College</p> 
+                                    <p>Navjeevan JR College of Commere and Science</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="single_practice">
+                            <div class="practice_image">
+                                <img src="img/ssc-logo.jpeg" alt="">
+                            </div>
+                            <div class="practice_hover text-center">
+                                <div class="hover_inner">
+                                    <i class="flaticon-jury"></i>
+                                    <h3>SSC</h3>
+                                    <p>High School</p> 
+                                    <p>St Lawrance High School </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Education end -->
+        <!-- Programming Skills Start -->
+        <div class="our_loyers" id="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_title text-center mb-60">
+                            <h3>Programming Skills</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="single_loyers text-center">
+                                <div class="single_loyers text-center">
+                                    <div class="thumb">
+                                        <img src="img/pythonlogo.webp" alt="">
+                                    </div>
+                                    <h3>Python</h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="single_loyers text-center">
+                            
+                                <div class="single_loyers text-center">
+                                    <div class="thumb">
+                                        <img src="img/selenium.jpg" alt="">
+                                    </div>
+                                    <h3>Selenium</h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="single_loyers text-center">
+                            
+                                <div class="single_loyers text-center">
+                                    <div class="thumb">
+                                        <img src="img/sql.jpg" alt="">
+                                    </div>
+                                    <h3>SQL</h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="single_loyers text-center">
+                            
+                                <div class="single_loyers text-center">
+                                    <div class="thumb">
+                                        <img src="img/apitesting.webp" alt="">
+                                    </div>
+                                    <h3>API Testing</h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="single_loyers text-center">
+                                <div class="single_loyers text-center">
+                                    <div class="thumb">
+                                        <img src="img/automationtesting.webp" alt="">
+                                    </div>
+                                    <h3>Automation</h3>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Programming Skills Ends -->
+<!-- Certification Starts -->
+<section id="certificates" id="certificate">
+    <div class="container">
+      <h2 class="project-heading">Certification</h2>
+      <div class="certificate">
+        <div class="certificate-images">
+          <div class="certificate-box">
+            <img src="img/certificate_python.webp" alt="Certificate 1">
+          </div>
+          <div class="certificate-box">
+            <img src="img/certificate_C.webp" alt="Certificate 2">
+          </div>
+          <div class="certificate-box">
+            <img src="img/udemy1.jpg" alt="Certificate 3">
+          </div>
+          <div class="certificate-box">
+            <img src="img/udemy2.jpg" alt="Certificate 4">
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Certification End -->
+<!-- Projects Starts  -->
 <section id="projects">
-  <div class="container">
-    <h2 class="project-heading">Projects</h2>
-    <div id="carrental-project" class="project">
-      <h3>CAR RENTAL PORTAL</h3>
-      <p>CarRental Portal: Crafted with HTML, CSS, and JS, utilizing PHP and MySQL for seamless car booking and management.</p>
+    <div class="container" id="project">
+      <h2 class="project-heading-2">Projects</h2>
+      <div id="carrental-project" class="project">
+        <h3>CAR RENTAL PORTAL</h3>
+        <p>Car Rental Portal: Crafted with HTML, CSS, and JS, utilizing PHP and MySQL for seamless car booking and management.</p>
+        <div class="screenshots">
+          <div class="screenshots-inner">
+            <img src="img/carrental1.webp" alt="Carrental-project">
+            <img src="img/carrental2.webp" alt="Carrental-project">
+            <img src="img/carrental3.webp" alt="Carrental-project">
+            <img src="img/carrental4.webp" alt="Carrental-project">
+            <img src="img/carrental5.webp" alt="Carrental-project">
+            <img src="img/carrental6.webp" alt="Carrental-project">
+            <img src="img/carrental7.webp" alt="Carrental-project">
+            <img src="img/carrental8.webp" alt="Carrental-project">
+            <img src="img/carrental9.webp" alt="Carrental-project">
+          </div>
+        </div>
+      </div>
+    <br>
+    <div id="technomarket-project" class="project">
+      <h3>TechnoMarket</h3>
+      <p>TechnoMarket: Developed with HTML, CSS, and JS. Future plans include Python, Django, and MySQL integration for advanced functionality and robust database management.</p>
       <div class="screenshots">
         <div class="screenshots-inner">
-          <img src="images/carrental1.webp" alt="Carrental-project">
-          <img src="images/carrental2.webp" alt="Carrental-project">
-          <img src="images/carrental3.webp" alt="Carrental-project">
-          <img src="images/carrental4.webp" alt="Carrental-project">
-          <img src="images/carrental5.webp" alt="Carrental-project">
-          <img src="images/carrental6.webp" alt="Carrental-project">
-          <img src="images/carrental7.webp" alt="Carrental-project">
-          <img src="images/carrental8.webp" alt="Carrental-project">
-          <img src="images/carrental9.webp" alt="Carrental-project">
+          <img src="img/TechnoMarket1.webp" alt="technomarket-project">
+          <img src="img/TechnoMarket2.webp" alt="technomarket-project">
+          <img src="img/TechnoMarket3.webp" alt="technomarket-project">
+          <img src="img/TechnoMarket4.webp" alt="technomarket-project">
+          <img src="img/TechnoMarket5.webp" alt="technomarket-project">
+          <img src="img/TechnoMarket6.webp" alt="technomarket-project">
         </div>
       </div>
     </div>
-  <br>
-  <div id="technomarket-project" class="project">
-    <h3>TechnoMarket</h3>
-    <p>TechnoMarket: Developed with HTML, CSS, and JS. Future plans include Python, Django, and MySQL integration for advanced functionality and robust database management.</p>
-    <div class="screenshots">
-      <div class="screenshots-inner">
-        <img src="images/TechnoMarket1.webp" alt="technomarket-project">
-        <img src="images/TechnoMarket2.webp" alt="technomarket-project">
-        <img src="images/TechnoMarket3.webp" alt="technomarket-project">
-        <img src="images/TechnoMarket4.webp" alt="technomarket-project">
-        <img src="images/TechnoMarket5.webp" alt="technomarket-project">
-        <img src="images/TechnoMarket6.webp" alt="technomarket-project">
-      </div>
-    </div>
-  </div>
-    <!-- Add more project sections as needed -->
-  </section> 
-  <section id="clients">
-    <h2>Work Experience</h2>
-    <div class="company-list">
-      <div class="company">
-        <div class="company-image">
-          <img src="images/Brained.webp" alt="Company" />
-        </div>
-        <div class="company-info">
-          <h3>BRAINED</h3>
-          <p>QA Tester</p>
-          <p>6 Months</p>
-          <p>During my 6-month internship at Brained, I had the opportunity to learn and work on various aspects of software testing. I gained hands-on experience in both manual and automated testing methodologies. I was involved in detailed testing of web applications, mobile applications, and desktop software.</p>
-          <p>My internship at Brained provided me with a solid foundation in software testing principles and practices, enhancing my problem-solving skills, attention to detail, and ability to work effectively in a team.</p>
-        </div>
-      </div>
-      <div class="company">
-        <div class="company-image">
-          <img src="images/dgnote.webp  " alt="Company" />
-        </div>
-        <div class="company-info">
-          <h3>DgNote Technologies</h3>
-          <p>Test Engineer</p>
-          <p>Currently Working</p>
-          <p>As a Test Engineer at DgNote, my current company,I am involved in ensuring the quality and reliability of software products through comprehensive testing procedures. I work closely with the development team to understand project requirements, create test plans, and execute test cases.</p>
-          <p>Working at DgNote has provided me with valuable exposure to real-world software development and testing scenarios. It has sharpened my technical skills, problem-solving abilities, and attention to detail.</p>
-        </div>
-      </div>
-      <!-- Add more company sections as needed -->
-    </div>
-  </section>
-  <div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i>  siddheshgovalkar1967@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> 8070506024</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/Killer0502/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://twitter.com/_sid0502_?t=IBQNVWcmbnXC73-OluAyXg&s=09" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                    <a href="https://www.instagram.com/_siddhesh.0502_/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/siddhesh-govalkar-b65a43228/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.me/918070506024" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <!-- Add more project sections as needed -->
+    </section> 
+        <!-- Experience Start -->
+        <div class="container-xxl py-5" id="experience">
+            <div class="container">
+                <h2 class="project-heading-3">Experience</h2>
+                <div class="bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded" src="img/Brained.jpg" style="object-fit: contain;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h1 class="mb-4">BRAINED</h1>
+                                <h3>Trainee (Jun 2022 - Nov 2022)</h3>
+                                <p class="mb-4">
+                                    <ul class="bullet-list">
+                                        <li>6-month internship at Brained provided comprehensive software testing exposure.</li>
+                                        <li>Acquired proficiency in both manual and automated testing methodologies.</li>
+                                        <li>Gained hands-on experience in testing web applications, mobile apps, and desktop software.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/sidd-1967/Portfolio/raw/main/Resume/siddhesh-resume.pdf" download class="btn btn2">Download CV</a>
+                <div class="row g-0">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="h-100 d-flex flex-column justify-content-center p-5">
+                            <h1 class="mb-4">DgNote Technologies</h1>
+                            <h3>Test Engineer (Dec 2022 – Present)</h3>
+                            <p class="mb-4">
+                                <ul class="bullet-list">
+                                    <li>Responsibilities: Ensure software quality and reliability through thorough testing.</li>
+                                    <li>Collaboration: Work closely with the development team.</li>
+                                    <li>Tasks: Understand project requirements, create test plans, execute test cases.</li>
+                                    <li>Proficient in Manual Testing and Automation Testing.</li>
+                                    <li>Skilled in API Testing, ensuring seamless functionality.</li>
+                                    <li>Experienced in Database Testing, verifying data integrity.</li>
+                                    <li>Proficient in API Load Testing, assessing performance under load.</li>
+                                    <li>Well-versed in UI Testing, ensuring user interface responsiveness.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute w-100 h-100 rounded" src="img/DgNote_Logo.jpg" style="object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contact-right">
-                    <form action="mailto:siddheshgovalkar1967@gmail.com" method="post" enctype="text/plain">
-                      <input type="text" id="name" name="name" placeholder="Your Name" maxlength="50" required>
-                      <input type="email" id="email" name="email" placeholder="Your Email" maxlength="50" required>
-                      <textarea id="message" name="message" placeholder="Your Message" rows="5" maxlength="250" required></textarea>
-                      <div class="btn-wrapper">
-                        <button type="submit" class="btn btn3">Submit</button>
-                      </div>
-                </form>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2023 Portfolio by Siddhesh Govalkar</p>
+        <!-- Experience End -->
+<!-- Contact me start -->
+<div class="appointment_area" id="contact_me">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-5 col-md-6 col-lg-6">
+                <div class="appiontment_thumb d-none d-lg-block">
+                    <img src="img/qa.png" alt="">
+                </div>
+            </div>
+            <div class="col-xl-6 offset-xl-1 col-md-6 col-md-12 col-lg-6">
+                <div class="appointment_info">
+                    <h3>Contact Information</h3>
+                    <p>You can reach out to me via email, phone, or by using the contact form below. I'll do my best to respond to your message promptly.</p>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <input type="text" placeholder="Your Name">
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <input type="email" placeholder="Your Email">
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <input type="text" placeholder="Phone no.">
+                            </div>
+                            <div class="col-xl-12">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="appoinment_button">
+                                    <button class="boxed-btn5" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-  <a href="#" id="scrollToTopButton" title="Scroll to Top"></a>
+<br>
+<br>
+<br>
+<!-- footer_start -->
+    <footer class="portfolio-footer">
+        <div class="left">
+            <img src="img/qa.png" alt="Your Logo">
+        </div>
+        <div class="middle">
+            <nav>
+                <div class="copyright-text">© 2023 Portfolio by Siddhesh Govalkar</div> 
+            </nav>
+        </div>
+        <div class="right">
+            <a href="#"><i class="fa fa-whatsapp"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>    
+        </div>
+    </footer>  
+<!-- footer_end -->
 </body>
 </html>
