@@ -171,6 +171,9 @@ h3 {
   background-image: url(../img/slider/slider-img-1.jpg);
 }
 
+.logo-img a img{
+  border-radius: 10%;
+}
 
 .overlay {
   position: relative;
@@ -833,16 +836,13 @@ h3 {
 
 .slider_bg_1 {
   background-image: url(../img/banner/banner3.webp);
+  border-radius: 20px;
 }
-
 @media (max-width: 767px) {
   .slider_bg_1 {
-    max-width: 95%;
+    background-image: url(../img/banner/banner3-mobile.webp); /* Mobile background image */
+    border-radius: 0; /* Remove border-radius on mobile if needed */
   }
-}
-
-.slider_bg_2 {
-  background-image: url(../img/banner/banner2.png);
 }
 
 .slider_area {
@@ -850,11 +850,6 @@ h3 {
   background: #000;
 }
 
-@media (max-width: 767px) {
-  .slider_area {
-    padding: 0 20px;
-  }
-}
 
 .slider_area_inner {
   height: 800px;
@@ -912,8 +907,8 @@ h3 {
 
 @media (max-width: 767px) {
   .slider_area_inner .single_slider .slider_text h3 {
-    font-size: 25px;
-    line-height: 35px;
+    font-size: 43px;
+    line-height: 50px;
   }
 }
 
@@ -957,7 +952,7 @@ h3 {
 
 @media (max-width: 767px) {
   .slider_area_inner .single_slider .slider_text p {
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 25px;
   }
 }

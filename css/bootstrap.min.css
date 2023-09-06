@@ -638,7 +638,8 @@ pre code {
 
 .no-gutters {
     margin-right: 0;
-    margin-left: 0
+    margin-left: 0;
+    max-width: fit-content;
 }
 
 .no-gutters>.col,
