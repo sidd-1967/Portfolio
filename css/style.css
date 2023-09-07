@@ -1682,12 +1682,12 @@ h3 {
 
 
 .project {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   text-align: center;
-  box-shadow: 0px 0px 30px;
+  /* box-shadow: 0px 0px 30px; */
 }
 
 .screenshots {
@@ -1847,4 +1847,27 @@ h3 {
     text-align: center;
     margin-left: 0px;
   }
+}
+
+
+/* Customize the default scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+  border-radius: 6px;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #F2C64D; /* Change thumb color to red */
+  border-radius: 6px; /* Adjust the border radius as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #534b4b; /* Change track background color */
+  border-radius: 6px;
+}
+/* Track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #F2C64D; /* Change thumb color on hover */
+  border-radius: 6px;
 }

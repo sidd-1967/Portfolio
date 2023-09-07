@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -375,26 +376,31 @@
             </div>
             <div class="col-xl-6 offset-xl-1 col-md-6 col-md-12 col-lg-6">
                 <div class="appointment_info">
-                    <h3>Contact Information</h3>
-                    <p>You can reach out to me via email, phone, or by using the contact form below. I'll do my best to respond to your message promptly.</p>
-                    <form action="#">
+                    <!-- <h3>Contact Information</h3>
+                    <p>You can reach out to me via email, phone, or by using the contact form below. I'll do my best to respond to your message promptly.</p> -->
+                    <!-- <form action="mailto:recipient@example.com" method="post" enctype="text/plain">
                         <div class="row">
                             <div class="col-xl-6 col-md-6">
-                                <input type="text" placeholder="Your Name">
+                                <input type="text" name="Name" placeholder="Your Name" required>
                             </div>
                             <div class="col-xl-6 col-md-6">
-                                <input type="email" placeholder="Your Email">
+                                <input type="email" name="Email" placeholder="Your Email" required>
                             </div>
                             <div class="col-xl-6 col-md-6">
-                                <input type="text" placeholder="Phone no.">
+                                <input type="tel" name="Phone" placeholder="Phone no." required>
                             </div>
                             <div class="col-xl-12">
-                                <textarea placeholder="Message"></textarea>
+                                <textarea name="Message" placeholder="Message" required></textarea>
                             </div>
                             <div class="col-xl-12">
                                 <div class="appoinment_button">
                                     <button class="boxed-btn5" type="submit">Submit</button>
-                                </div>
+                                </div>                            
+                            </div> -->
+                            <div class="custom-scrollbar" id="scrollbar">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdXOIVLRlUk9aJWTvmk1-7AQ239vqmKUL_qiV0WeI1Kek3f9w/viewform?embedded=true" 
+                                width="540" height="400" frameborder="0" marginheight="0" marginwidth="0" 
+                                class="custom-form" overflow="hidden" >Loading… </iframe>
                             </div>
                         </div>
                     </form>                    
@@ -417,10 +423,10 @@
             </nav>
         </div>
         <div class="right">
-            <a href="https://www.linkedin.com/in/siddhesh-govalkar-b65a43228/"><i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/_sid0502_"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.facebook.com/Killer0502"><i class="fa fa-facebook"></i></a>    
-        </div>
+            <a href="https://www.linkedin.com/in/siddhesh-govalkar-b65a43228/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/_sid0502_" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/Killer0502" target="_blank"><i class="fa fa-facebook"></i></a>    
+        </div>        
     </footer>  
 <!-- footer_end -->
 </body>

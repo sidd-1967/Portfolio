@@ -64,3 +64,4 @@ window.addEventListener("scroll", checkScroll);
 
 // Add a click event listener to scroll to the top when the button is clicked
 scrollToTopButton.addEventListener("click", scrollToTop);
+
