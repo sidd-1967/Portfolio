@@ -39,29 +39,4 @@ setInterval(() => rotateImages('technomarket-project'), 2000);
 
 
 
-// JavaScript for the scroll to top button
-const scrollToTopButton = document.getElementById("scrollToTop");
-
-// Function to check if the user has scrolled down enough to show the button
-function checkScroll() {
-    if (window.pageYOffset > 100) {
-        scrollToTopButton.classList.add("active");
-    } else {
-        scrollToTopButton.classList.remove("active");
-    }
-}
-
-// Function to scroll to the top of the page when the button is clicked
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-// Add a scroll event listener to check when to show the button
-window.addEventListener("scroll", checkScroll);
-
-// Add a click event listener to scroll to the top when the button is clicked
-scrollToTopButton.addEventListener("click", scrollToTop);
 

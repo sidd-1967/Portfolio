@@ -1849,7 +1849,6 @@ h3 {
   }
 }
 
-
 /* Customize the default scrollbar for WebKit browsers */
 ::-webkit-scrollbar {
   width: 10px; /* Adjust the width as needed */
@@ -1864,7 +1863,7 @@ h3 {
 
 ::-webkit-scrollbar-track {
   background-color: #534b4b; /* Change track background color */
-  border-radius: 6px;
+  
 }
 /* Track on hover */
 ::-webkit-scrollbar-thumb:hover {
