@@ -840,7 +840,7 @@ h3 {
 }
 @media (max-width: 767px) {
   .slider_bg_1 {
-    background-image: url(../img/banner/banner3-mobile.webp); /* Mobile background image */
+    background-image: url(../img/banner/banner3.webp); /* Mobile background image */
     border-radius: 0; /* Remove border-radius on mobile if needed */
   }
 }
@@ -1593,64 +1593,6 @@ h3 {
   padding: 100px 0 70px 0;
 }
 
-/* Certificates CSS Starts here */
-#certificates {
-  background-color: rgb(0, 0, 0);
-  padding: 40px 0;
-  text-align: center;
-}
-
-.project-heading {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 42px;
-  line-height: 48px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.certificate {
-  display: flex;
-  justify-content: center;
-}
-
-.certificate-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-}
-
-.certificate-box {
-  width: 400px;
-  height: 250px;
-  margin: 25px;
-  background-color: #333333;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-  
-}
-
-.certificate-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  .certificate-box {
-    width: 300px;;
-    height: 200px;
-  }
-}
-
-/* Certificates CSS Ends here */
-
 /* Projects CSS Starts here */
 .project-heading {
   text-align: center;
@@ -1835,7 +1777,6 @@ h3 {
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  margin-left: 145px;
 }
 
 @media (max-width: 767px) {
@@ -1845,9 +1786,27 @@ h3 {
     font-weight: 700;
     color: #ffffff;
     text-align: center;
-    margin-left: 0px;
   }
 }
+
+.contact-info{
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+@media (max-width: 767px) {
+  .contact-info{
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
 
 /* Customize the default scrollbar for WebKit browsers */
 ::-webkit-scrollbar {
