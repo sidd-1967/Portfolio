@@ -1658,7 +1658,7 @@ h3 {
 
 /* Projects CSS Ends here */
 
-/* Experience css */
+/* Experience css starts */
 .project-heading-3{
   text-align: center;
   margin-top: 40px;
@@ -1679,6 +1679,58 @@ h3 {
   margin-right: 8px; /* Adjust the spacing between the bullet and text */
   vertical-align: middle; /* Align the bullet vertically with the text */
 }
+/* Experience css ends */
+/* certificate css starts */
+h2.certificates{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.certificate_screenshots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.certificate-screenshots-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.certificate_screenshots img {
+  flex: 0 0 33.33%;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: fill;
+  margin: 0 5px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .certificate-screenshots-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .certificate-screenshots-inner img {
+    flex: 0 0 33.33%;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: fill;
+    margin: 0 5px;
+    border-radius: 5px;
+    pointer-events: none;
+  }
+}
+
 
 /* Style the footer */
 .portfolio-footer {
@@ -1807,7 +1859,6 @@ h3 {
   }
 }
 
-
 /* Customize the default scrollbar for WebKit browsers */
 ::-webkit-scrollbar {
   width: 10px; /* Adjust the width as needed */
@@ -1822,8 +1873,8 @@ h3 {
 
 ::-webkit-scrollbar-track {
   background-color: #534b4b; /* Change track background color */
-  
 }
+
 /* Track on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #F2C64D; /* Change thumb color on hover */

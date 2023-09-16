@@ -7806,7 +7806,8 @@ button.bg-dark:hover {
 
 .mb-4,
 .my-4 {
-    margin-bottom: 1.5rem!important
+    margin-bottom: 1.5rem!important;
+    text-decoration: underline;
 }
 
 .ml-4,
