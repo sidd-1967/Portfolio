@@ -1,10 +1,8 @@
 # Resume Website
 
-I've transformed my resume into a website using HTML, CSS, and JavaScript.
-
 ## Overview
 
-This project serves as an online version of my resume, making it easily accessible to anyone interested in learning more about my skills, experience, and background.
+Welcome to my online resume! This website is a digital representation of my qualifications, work experience, and skills. It's designed to provide a convenient and visually appealing way for anyone to explore my professional background.
 
 ## Features
 
