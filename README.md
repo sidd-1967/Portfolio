@@ -1,17 +1,31 @@
-Siddhesh Govalkar - Resume Website
-Overview
-Hello! This is Siddhesh Govalkar's online resume. This website serves as a digital showcase of my qualifications, work experience, and skills. Feel free to explore and get to know more about my professional background.
+# Siddhesh Govalkar's Portfolio
 
-Features
-Responsive Design: The website is crafted to be responsive, ensuring a seamless experience across various devices, including desktops and mobiles.
+## Overview
 
-Interactive Elements: Engage with interactive elements incorporated using JavaScript, providing an enhanced and user-friendly interface.
+Welcome to my online portfolio! This website serves as a digital representation of my qualifications, work experience, and skills. It's designed to offer a convenient and visually appealing way for anyone to explore my professional background.
 
-Technologies Used
-HTML: Markup language for structuring the content of the website.
+## Features
 
-CSS: Styling language used to enhance the visual presentation and layout.
+- **Responsive Design**: The website is designed to look great on desktop and mobile devices.
+  
+- **Interactive Elements**: Utilizes JavaScript to include interactive elements for an enhanced user experience.
 
-JavaScript: Programming language employed to add interactivity and dynamic features.
+## Technologies Used
 
-Feel free to navigate through the different sections and learn more about my journey and skills. If you have any questions or would like to get in touch, don't hesitate to reach out!
+- HTML
+- CSS
+- JavaScript
+
+## Getting Started
+
+1. Clone this repository.
+2. Open `index.html` in your preferred web browser.
+
+## Contact Information
+
+Feel free to reach out to me via email or social media:
+
+- Email: [siddheshgovalkar1967@gmail.com](mailto:siddheshgovalkar1967@gmail.com)
+- LinkedIn: [Siddhesh Govalkar](https://www.linkedin.com/in/siddhesh-govalkar-b65a43228/)
+- Twitter: [\_sid0502\_](https://twitter.com/_sid0502_)
+- WhatsApp: [+91 8070506024](https://api.whatsapp.com/send?phone=918070506024)
