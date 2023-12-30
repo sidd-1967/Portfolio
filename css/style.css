@@ -135,6 +135,11 @@ label {
   opacity: 1;
 }
 
+/* Set the color of Font Awesome icons to white */
+.fa {
+  color: #fff; /* Set your desired color, in this case, white (#fff) */
+}
+
 
 /* Style for the sticky header */
 .sticky {
@@ -1789,8 +1794,6 @@ h2.certificates{
   color: #8B8B8B;
   width: 40px;
   height: 40px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
