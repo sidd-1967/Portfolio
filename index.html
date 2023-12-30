@@ -13,9 +13,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
-    <script src="js/script.js"></script>
-    <script src="js/contactus.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -47,60 +47,42 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="mobile-menu">
-                <div class="menu-panel">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#project">Projects</a></li>
-                            <li><a href="#experience">Experience</a></li>
-                            <li><a href="#contact_me">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div> -->
     </header>
-
-    <!-- Home page start -->
-    <div class="slider_area ">
-        <div class="slider_area_inner slider_bg_1 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7">
-                        <div class="single_slider">
-                            <div class="slider_text">
-                                <h3>SIDDHESH <br>
-                                    DHANANJAY GOVALKAR</h3>
-                                <p>Test Engineer at DgNote Technologies </p>
-                                <a href="https://github.com/sidd-1967/Portfolio/raw/main/resume/siddhesh-resume.pdf" class="boxed-btn4 ">Download CV</a>
-                            </div>
+<!-- Home page start -->
+<div class="slider_area ">
+    <div class="slider_area_inner slider_bg_1 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="single_slider">
+                        <div class="slider_text">
+                            <h3>SIDDHESH <br>
+                                DHANANJAY GOVALKAR</h3>
+                            <p>Test Engineer at DgNote Technologies </p>
+                            <a href="https://github.com/sidd-1967/Portfolio/raw/main/resume/siddhesh-resume.pdf" class="boxed-btn4 ">Download CV</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Home page_end -->
-    <!-- about me _start  -->
-    <div class="about_area" id="about">
+</div>
+<!-- About Me -->
+<div class="about_area" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-6">
-                    <div class="single_about_info text-center">
-                        <div class="about_thumb">
-                            <img src="img/manager.webp" alt="">
-                        </div>
-                        <h3>Skilled Test Engineer<br>
-                            </h3>
-                            <p>I am a Test Engineer with strong programming skills in Python, SQL & Selenium. 
-                                <br> I excel in automation testing, ensuring software quality & efficiency. I also conduct thorough manual testing, tracking defects diligently. 
-                                <br> Moreover, my expertise extends to API load testing. 
-                                <br>  I believe in effective communication & teamwork. Always eager to learn, I stay updated with the latest testing trends, delivering innovative solutions for superior software quality.
-                            </p>
+        <div class="row">
+            <div class="col-xl-6 col-md-6">
+                <div class="single_about_info text-center">
+                    <div class="about_thumb">
+                        <img src="img/manager.webp" alt="">
                     </div>
+                    <h3>Skilled Test Engineer<br>
+                        </h3>
+                            <p>As an experienced Test Engineer, I leverage Python, SQL, JavaScript, and Selenium for exceptional automation testing. 
+                                <br>My commitment to software quality is evident in detailed manual testing and adept defect detection.  
+                                <br>Specializing in API load testing, I thrive in collaborative environments, staying current on trends through continuous learning to deliver cutting-edge solutions for superior software quality.
+                            </p>
+                </div>
                 </div>
                 <div class="col-xl-6 col-md-6">
                     <div class="single_about_info text-center">
@@ -112,18 +94,16 @@
                             </div>
                         </div>
                         <h3>More About me</h3>
-                        <p>I really love playing video games and sharing them with others on live streams,
-                            <br> Besides that, I'm into staying fit and healthy, and I'm a big fan of music.
-                            <br> I believe in enjoying life and expressing creativity, whether I'm gaming or pursuing other interests.
+                        <p>I have a deep passion for playing video games and enjoy my gaming. 
+                            <br> Additionally, I prioritize maintaining a healthy and active lifestyle, and I have a strong appreciation for music. 
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- about me _end -->
 
-    <!-- Education start -->
+    <!-- Education -->
     <div class="practice_area" id="Education" >
             <div class="container-fluid p-0">
                 <div class="row">
@@ -144,6 +124,7 @@
                                     <h3>MCA</h3>
                                     <p>Master of Computer Application</p> 
                                     <p>Lovely Professional University</p>
+                                    <p>Currently Learning</p>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +177,6 @@
                 </div>
             </div>
         </div>
-        <!-- Education end -->
         <!-- Programming Skills Start -->
         <div class="our_loyers" id="skills">
             <div class="container">
@@ -304,7 +284,7 @@
 </section>
 <section>
     <div class="container">
-        <h2 class="certificates">Certificates</h2>
+        <h2 class="certificates">Certification</h2>
     <div id="certificate" class="certificate">
         <div class="certificate_screenshots">
           <div class="certificate-screenshots-inner">
@@ -324,18 +304,24 @@
                     <div class="row g-0">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
+                                <a href="https://brained.app/" target="_blank">
                                 <img class="position-absolute w-100 h-100 rounded" src="img/brained.webp" style="object-fit: contain;">
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4">BRAINED</h1>
-                                <h3>Trainee (Jun 2022 - Nov 2022)</h3>
+                                <h3>Intern (Jun 2022 - Nov 2022)</h3>
                                 <p class="mb-4">
                                     <ul class="bullet-list">
-                                        <li>6-month internship at Brained provided comprehensive software testing exposure.</li>
-                                        <li>Acquired proficiency in both manual and automated testing methodologies.</li>
-                                        <li>Gained hands-on experience in testing web applications, mobile apps, and desktop software.</li>
+                                        <li>Completed a 6-month internship at Brained, specializing in Quality Assurance.</li>
+                                        <li>Gained hands-on experience in testing methodologies, and working on websites across diverse domains.</li>
+                                        <li>Executed test case design using multiple programming languages, ensuring versatility.</li>
+                                        <li>Collaborated on Android and iOS applications, expanding testing expertise to mobile platforms.</li>
+                                        <li>Worked alongside seasoned professionals to enhance skills in defect tracking.</li>
+                                        <li>Developed a strong foundation in QA practices, ensuring meticulous attention to detail.</li>
+                                        <li>Cultivated a passion for ensuring software excellence through rigorous testing.</li>
                                     </ul>
                                 </p>
                             </div>
@@ -349,28 +335,26 @@
                             <h3>Test Engineer (Dec 2022 – Present)</h3>
                             <p class="mb-4">
                                 <ul class="bullet-list">
-                                    <li>Responsibilities: Ensure software quality and reliability through thorough testing.</li>
-                                    <li>Collaboration: Work closely with the development team.</li>
-                                    <li>Tasks: Understand project requirements, create test plans, execute test cases.</li>
-                                    <li>Proficient in Manual Testing and Automation Testing.</li>
-                                    <li>Skilled in API Testing, ensuring seamless functionality.</li>
-                                    <li>Experienced in Database Testing, verifying data integrity.</li>
-                                    <li>Proficient in API Load Testing, assessing performance under load.</li>
-                                    <li>Well-versed in UI Testing, ensuring user interface responsiveness.</li>
+                                    <li>Took the lead in creating a handy automation tool, making testing easier and saving valuable time.</li>
+                                    <li>Coordinated with various companies to ensure our systems work seamlessly together, focusing on smooth collaboration and integration testing.</li>
+                                    <li>Used JMeter to check how well our systems handle different user loads, ensuring they perform smoothly.</li>
+                                    <li>Played a key role in troubleshooting issues identified during testing phases, contributing to the delivery of high-quality software.</li>
+                                    <li>Continued learning and staying updated on the latest tools and techniques in quality assurance to bring innovative solutions to the team.</li>
                                 </ul>
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100 rounded" src="img/DgNote_Logo.webp" style="object-fit: contain;">
+                            <a href="https://dgnote.com/" target="_blank">
+                                <img class="position-absolute w-100 h-100 rounded" src="img/DgNote_Logo.webp" style="object-fit: contain;">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
         </div>
-        <!-- Experience End -->
 <!-- Contact me start -->
 <div class="appointment_area" id="contact_me">
     <div class="container">
@@ -384,25 +368,30 @@
                 <div class="appointment_info">
                     <h3>Contact Information</h3>
                     <p>You can reach out to me via email, phone, or by using the contact form below. I'll do my best to respond to your message promptly.</p>
-                    <form action="#" 
+                    <form id="contactForm" action="#" 
                     method="post" enctype="text/plain">
-                        <div class="row">
-                            <div class="col-xl-6 col-md-6">
-                                <input type="text" name="Name" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <input type="email" name="Email" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <input type="tel" name="Phone" placeholder="Phone no." required>
-                            </div>
-                            <div class="col-xl-12">
-                                <textarea name="Message" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="appoinment_button">
-                                    <button class="boxed-btn5" type="submit">Submit</button>
-                                </div>                            
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6">
+                                    <input type="text" name="Name" id="name" placeholder="Your Name">
+                                    <span id="nameError" class="error-message"></span>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <input type="email" name="Email" id="email" placeholder="Your Email">
+                                    <span id="emailError" class="error-message"></span>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <input type="tel" name="Phone" id="phone" placeholder="Phone no.">
+                                    <span id="phoneError" class="error-message"></span>
+                                </div>
+                                <div class="col-xl-12">
+                                    <textarea name="Message" id="message" placeholder="Message"></textarea>
+                                    <span id="messageError" class="error-message"></span>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="appoinment_button">
+                                        <button class="boxed-btn5" type="submit" onclick="validateForm()">Submit</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>                    
@@ -412,7 +401,21 @@
     </div>
 </div>
 <br>
-<br>
+<div id="thankYouPopup">
+    <span class="closeButton" onclick="closeThankYouPopup()"></span>
+    <div class="d-flex justify-content-center">
+        <div class="check-container">
+            <div class="check-background d-flex justify-content-center">
+                <svg viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 25L27.3077 44L58.5 7" stroke="white" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+            <div class="check-shadow"></div>
+        </div>
+    </div>    
+    <h2>Thank You!</h2>
+    <p>Your message has been submitted successfully.</p>
+</div>
 <br>
 <!-- footer_start -->
     <footer class="portfolio-footer">
@@ -431,6 +434,5 @@
             <a href="https://api.whatsapp.com/send?phone=918070506024" target="_blank"><i class="fa fa-whatsapp"></i></a>    
         </div>        
     </footer>  
-<!-- footer_end -->
 </body>
 </html>

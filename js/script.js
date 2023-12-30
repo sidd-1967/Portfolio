@@ -60,14 +60,104 @@ function rotateCertificateImages(containerId) {
 // Enable this script with a unique function name
 setInterval(() => rotateCertificateImages('certificate'), 2000);
 
+// Thank you pop-up
+function showThankYouPopup() {
+  document.getElementById('thankYouPopup').style.display = 'block';
+}
 
+function closeThankYouPopup() {
+  document.getElementById('thankYouPopup').style.display = 'none';
+}
 
-// JavaScript to toggle the mobile menu
-// const mobileMenu = document.querySelector('.mobile-menu');
-// const menuToggle = document.querySelector('.menu-toggle');
-// const menuPanel = document.querySelector('.menu-panel');
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
 
-// menuToggle.addEventListener('click', () => {
-//     mobileMenu.classList.toggle('menu-open');
-//     menuPanel.classList.toggle('open');
-// });
+      // Your validation logic here
+      if (validateForm()) {
+          showThankYouPopup();
+
+          // Clear the form after 5 seconds
+          setTimeout(function () {
+              document.getElementById('contactForm').reset();
+              closeThankYouPopup();
+          }, 5000);
+      }
+  });
+});
+
+function validateForm() {
+  // Your validation logic here
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var message = document.getElementById('message').value;
+
+  // Reset error messages
+  document.getElementById('nameError').innerHTML = '';
+  document.getElementById('emailError').innerHTML = '';
+  document.getElementById('phoneError').innerHTML = '';
+  document.getElementById('messageError').innerHTML = '';
+
+  // Name validation
+  if (name.trim() === '') {
+      document.getElementById('nameError').innerHTML = 'Full Name cannot be blank';
+  } else if (/[^a-zA-Z\s]/.test(name)) {
+      document.getElementById('nameError').innerHTML = 'Full Name cannot contain Numbers & Special Characters';
+  } else if (name.length > 25) {
+      document.getElementById('nameError').innerHTML = 'Full Name Cannot exceed more than 25 chars';
+  }
+
+  // Email validation
+  if (email.trim() === '') {
+      document.getElementById('emailError').innerHTML = 'Email cannot be blank';
+  } else if (!isValidEmail(email)) {
+      document.getElementById('emailError').innerHTML = 'Invalid Email';
+  }
+
+  // Phone validation
+  if (phone.trim() === '') {
+      document.getElementById('phoneError').innerHTML = 'Phone Number cannot be blank';
+  } else if (/[^0-9]/.test(phone)) {
+      document.getElementById('phoneError').innerHTML = 'Phone number Cannot contain Alphabets & Special Characters';
+  } else if (/^[0-5]/.test(phone)) {
+      document.getElementById('phoneError').innerHTML = 'Invalid Phone Number';
+  }
+
+  // Message validation
+  if (message.trim() === '') {
+      document.getElementById('messageError').innerHTML = 'Message Field cannot be blank';
+  } else if (message.length > 350) {
+      document.getElementById('messageError').innerHTML = 'Message Field Cannot exceed 350 Chars';
+  }
+
+  // Check if there are any validation errors
+  var errors = document.querySelectorAll('.error-message');
+  for (var i = 0; i < errors.length; i++) {
+      if (errors[i].innerHTML !== '') {
+          return false; // Validation failed
+      }
+  }
+
+  return true; // Validation passed
+}
+
+function isValidEmail(email) {
+  // Basic email validation regex
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function clearForm() {
+  // Clear form fields
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('message').value = '';
+
+  // Clear error messages
+  document.querySelectorAll('.error-message').forEach(function (element) {
+      element.textContent = '';
+  });
+}
+
