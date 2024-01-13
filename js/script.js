@@ -224,3 +224,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = ''; // Revert to the default scroll behavior
   }
 });
+
+
+
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
