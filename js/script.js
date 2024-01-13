@@ -210,21 +210,17 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle('opened');
 
     if (mobileMenu.classList.contains('opened')) {
-      disableTouch(); // Disable touch when the menu is opened
+      disableScroll(); // Disable page scroll when the menu is opened
     } else {
-      enableTouch(); // Enable touch when the menu is closed
+      enableScroll(); // Enable page scroll when the menu is closed
     }
   }
 
-  function disableTouch() {
-    document.addEventListener('touchstart', preventDefaultTouch, { passive: false });
+  function disableScroll() {
+    document.body.style.overflow = 'hidden';
   }
 
-  function enableTouch() {
-    document.removeEventListener('touchstart', preventDefaultTouch);
-  }
-
-  function preventDefaultTouch(event) {
-    event.preventDefault();
+  function enableScroll() {
+    document.body.style.overflow = ''; // Revert to the default scroll behavior
   }
 });
