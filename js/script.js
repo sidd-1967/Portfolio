@@ -164,3 +164,34 @@ function clearForm() {
 // document.addEventListener('contextmenu', function (e) {
 //   e.preventDefault();
 // });
+
+
+// Hamburger Menu JS
+// document.addEventListener("DOMContentLoaded", function () {
+//   var hamburgerMenu = document.querySelector('.hamburger-menu');
+//   var mobileMenu = document.querySelector('.mobile-menu');
+
+//   hamburgerMenu.addEventListener('click', function () {
+//       mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
+//   });
+document.addEventListener("DOMContentLoaded", function () {
+  var hamburgerMenu = document.querySelector('.hamburger-menu');
+  var mobileMenu = document.querySelector('.mobile-menu');
+  var menuItems = document.querySelectorAll('.mobile-menu nav a'); // Select all menu items inside the mobile menu
+
+  hamburgerMenu.addEventListener('click', function () {
+      toggleMenu();
+  });
+
+  // Add event listeners to each menu item to close the menu when clicked
+  menuItems.forEach(function (menuItem) {
+      menuItem.addEventListener('click', function () {
+          toggleMenu();
+      });
+  });
+
+  function toggleMenu() {
+      hamburgerMenu.classList.toggle('opened');
+      mobileMenu.style.left = mobileMenu.style.left === "0%" ? "-100%" : "0%";
+  }
+});
