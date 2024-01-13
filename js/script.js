@@ -167,31 +167,64 @@ function clearForm() {
 
 
 // Hamburger Menu JS
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   var hamburgerMenu = document.querySelector('.hamburger-menu');
 //   var mobileMenu = document.querySelector('.mobile-menu');
+//   var menuItems = document.querySelectorAll('.mobile-menu nav a'); // Select all menu items inside the mobile menu
 
 //   hamburgerMenu.addEventListener('click', function () {
-//       mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
+//       toggleMenu();
 //   });
+
+//   // Add event listeners to each menu item to close the menu when clicked
+//   menuItems.forEach(function (menuItem) {
+//       menuItem.addEventListener('click', function () {
+//           toggleMenu();
+//       });
+//   });
+
+//   function toggleMenu() {
+//       hamburgerMenu.classList.toggle('opened');
+//       mobileMenu.style.left = mobileMenu.style.left === "0%" ? "-100%" : "0%";
+//   }
+// });
 document.addEventListener("DOMContentLoaded", function () {
   var hamburgerMenu = document.querySelector('.hamburger-menu');
   var mobileMenu = document.querySelector('.mobile-menu');
-  var menuItems = document.querySelectorAll('.mobile-menu nav a'); // Select all menu items inside the mobile menu
+  var menuItems = document.querySelectorAll('.mobile-menu nav a');
 
   hamburgerMenu.addEventListener('click', function () {
-      toggleMenu();
+    toggleMenu();
   });
 
   // Add event listeners to each menu item to close the menu when clicked
   menuItems.forEach(function (menuItem) {
-      menuItem.addEventListener('click', function () {
-          toggleMenu();
-      });
+    menuItem.addEventListener('click', function () {
+      toggleMenu();
+    });
   });
 
   function toggleMenu() {
-      hamburgerMenu.classList.toggle('opened');
-      mobileMenu.style.left = mobileMenu.style.left === "0%" ? "-100%" : "0%";
+    hamburgerMenu.classList.toggle('opened');
+    mobileMenu.classList.toggle('opened');
+
+    if (mobileMenu.classList.contains('opened')) {
+      disableTouch(); // Disable touch when the menu is opened
+    } else {
+      enableTouch(); // Enable touch when the menu is closed
+    }
+  }
+
+  function disableTouch() {
+    document.addEventListener('touchstart', preventDefaultTouch, { passive: false });
+  }
+
+  function enableTouch() {
+    document.removeEventListener('touchstart', preventDefaultTouch);
+  }
+
+  function preventDefaultTouch(event) {
+    event.preventDefault();
   }
 });
