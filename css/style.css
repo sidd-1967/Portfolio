@@ -1257,7 +1257,7 @@ h3 {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(31, 31, 31, 0.9);
+  background: rgba(0 0 0 / 77%);
 }
 
 .practice_area .single_practice .practice_hover i {
