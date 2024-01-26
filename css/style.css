@@ -286,6 +286,75 @@ label {
   }
 }
 
+/* Media query for tablet view */
+@media only screen and (max-width: 991px) {
+  .hamburger-menu {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .main-menu {
+    display: none; /* Hide the main menu for smaller screens */
+  }
+
+  /* Adjusted styles for the mobile menu when it's opened */
+  .mobile-menu {
+    transition: left 0.3s ease; /* Slide animation */
+  }
+
+  .mobile-menu.opened {
+    left: 0;
+  }
+
+  .logo-img {
+    width: 190px !important;
+    margin-left: 20px;
+  }
+
+  /* Transform hamburger icon to X when menu is open */
+  .hamburger-menu.opened .bar {
+    background-color: transparent; /* Set the color to transparent when menu is open */
+  }
+
+  .hamburger-menu.opened .bar1::before,
+  .hamburger-menu.opened .bar1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.4s;
+  }
+  .hamburger-menu.opened .bar2::before,
+  .hamburger-menu.opened .bar2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.4s;
+  }
+  .hamburger-menu.opened .bar3::before,
+  .hamburger-menu.opened .bar3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.4s;
+  }
+
+  .hamburger-menu.opened .bar::before {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.opened .bar::after {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
 
 /* Style for the sticky header */
 .sticky {
@@ -456,6 +525,7 @@ h3 {
   border: 1px solid #F2C64D;
   text-align: center;
   text-transform: capitalize;
+  border-radius: 60px;
 }
 
 .boxed-btn4:hover {
@@ -473,8 +543,8 @@ h3 {
 }
 
 .boxed-btn5 {
-  background: #F2C64D;
-  color: #fff;
+  background: transparent;
+  color: #F2C64D;
   display: inline-block;
   padding: 15px 44px;
   font-family: "Poppins", sans-serif;
@@ -484,11 +554,12 @@ h3 {
   border: 1px solid #F2C64D;
   text-align: center;
   text-transform: capitalize;
+  border-radius: 60px;
 }
 
 .boxed-btn5:hover {
-  background: #fff;
-  color: #F2C64D !important;
+  background: #F2C64D;
+  color: #fff !important;
   border: 1px solid #F2C64D;
 }
 
@@ -984,20 +1055,33 @@ h3 {
 .header-area .social_media_links ul li a:hover {
   color: #F2C64D;
 }
+.single_loyers .icon i {
+  font-size: 40px;
+  color: #F2C64D;
+}
 
-.slider_bg_1 {
+
+/* Home page banner */
+/* .slider_bg_1 {
   background-image: url(../img/banner/banner3.webp);
   border-radius: 20px;
+} */
+
+.slider_bg_1 {
+  background-image: url(../img/3d-render-code-testing-functional-test-usability.jpg);
+  border-radius: 20px;
 }
+
 @media (max-width: 767px) {
   .slider_bg_1 {
-    background-image: url(../img/banner/banner3.webp); /* Mobile background image */
-    border-radius: 0; /* Remove border-radius on mobile if needed */
+    background-image: url(../img/banner/banner3.webp);
+    border-radius: 0; 
+    padding: 20px 20px !important;
   }
 }
 
 .slider_area {
-  padding: 0 50px;
+  /* padding: 60px 60px; */
   background: #000;
 }
 
@@ -1045,7 +1129,7 @@ h3 {
 }
 
 .slider_area_inner .single_slider .slider_text h3 {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: 400;
   font-family: "Playfair Display", serif;
   font-size: 56px;
@@ -1060,6 +1144,7 @@ h3 {
   .slider_area_inner .single_slider .slider_text h3 {
     font-size: 43px;
     line-height: 50px;
+    color: white;
   }
 }
 
@@ -1069,6 +1154,7 @@ h3 {
   .slider_area_inner .single_slider .slider_text h3 {
     font-size: 30px;
     line-height: 46px;
+    
   }
 }
 
@@ -1076,6 +1162,7 @@ h3 {
   .slider_area_inner .single_slider .slider_text h3 {
     font-size: 35px;
     line-height: 56px;
+    color: white;
   }
 }
 
@@ -1088,23 +1175,27 @@ h3 {
 .slider_area_inner .single_slider .slider_text p {
   font-size: 26px;
   font-weight: 400;
-  color: #C7C7C7;
+  color: #000000;
   margin-bottom: 50px;
   margin-top: 16px;
   line-height: 32px;
   font-style: italic;
+  font-family: 'Playfair Display';
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .slider_area_inner .single_slider .slider_text p {
     font-size: 16px;
+    color: #ffffff;
   }
 }
+
 
 @media (max-width: 767px) {
   .slider_area_inner .single_slider .slider_text p {
     font-size: 17px;
     margin-bottom: 25px;
+    color: #ffffff;
   }
 }
 
@@ -1425,6 +1516,35 @@ h3 {
   margin: auto;
   position: relative;
 }
+.single_loyers {
+  margin-bottom: 20px; 
+}
+.thumb {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100px; 
+  height: 100px; 
+  margin: 0 auto;
+}
+.thumb img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .thumb {
+      width: 80px; 
+      height: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .thumb {
+      width: 80px;
+      height: 80px;
+  }
+}
+
 
 @media (max-width: 767px) {
   .about_area .single_about_info .about_thumb {
@@ -1561,8 +1681,8 @@ h3 {
 }
 
 
-
-@media (max-width: 767px) {
+/* Contact Me */
+/* @media (max-width: 767px) {
   .appointment_area {
     padding-top: 100px;
   }
@@ -1592,7 +1712,6 @@ h3 {
     width: 100%;
     height: auto;
     object-fit: contain;
-    margin-left: -127px;
   }
 }
 
@@ -1751,6 +1870,259 @@ h3 {
   .contact-section {
     padding: 80px 0 50px;
   }
+}
+
+.contact-section .btn_2 {
+  background-color: #191d34;
+  padding: 18px 60px;
+  border-radius: 50px;
+  margin-top: 0;
+}
+
+.contact-section .btn_2:hover {
+  background-color: #ff5e13;
+}
+
+.sample-text-area {
+  background: #fff;
+  padding: 100px 0 70px 0;
+} */
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 767px) {
+  .appiontment_thumb {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .appiontment_thumb.d-none.d-lg-block {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 768px) {
+  .appointment_area {
+    padding-bottom: 100px;
+  }
+
+  .appiontment_thumb.d-none.d-lg-block {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media (max-width: 991px) {
+  .appointment_area .appointment_info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* Displaying heading and text in the same line for larger screens */
+@media (min-width: 992px) {
+  .contactheading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row; /* Updated to horizontal arrangement */
+  }
+
+  .contactheading h3 {
+    margin-right: 20px; /* Adjust as needed */
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+
+  .contactheading p {
+    margin: 0; /* Reset margin for paragraphs */
+    font-size: 16px; /* Adjust as needed */
+    color: #727272; /* Adjust text color as needed */
+  }
+}
+/* Separate class for p tags within contactheading */
+.contactheadingtag p {
+  font-size: 16px; /* Adjust as needed */
+  color: #727272; /* Adjust text color as needed */
+  margin: 0; /* Reset margin for paragraphs */
+}
+
+/* Separate class for p tags within contactheading */
+.contactheadingtag p {
+  font-size: 16px; /* Adjust as needed */
+  color: #727272; /* Adjust text color as needed */
+  margin: 0; /* Reset margin for paragraphs */
+}
+
+/* Separate class for p tags within contactheading */
+.contactheadingtag p {
+  font-size: 16px;
+  color: #727272;
+  margin: 0; /* Reset margin for paragraphs */
+  margin-top: 10px; /* Adjust as needed for spacing between h3 and p */
+}
+/* Separate class for p tags within contactheading for mobile view */
+@media (max-width: 767px) {
+  .contactheadingtag {
+    text-align: center; /* Center text for better mobile view */
+  }
+
+  .contactheadingtag h3{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .contactheadingtag p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+/* Separate class for p tags within contactheading for tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contactheadingtag {
+    text-align: center;
+  }
+
+  .contactheadingtag h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .contactheadingtag p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+/* Displaying heading and text on separate lines for larger screens */
+@media (min-width: 992px) {
+  .contactheading {
+    text-align: center;
+  }
+
+  .contactheading h3 {
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+}
+
+.appointment_area .appointment_info {
+  position: relative;
+  z-index: 0;
+}
+
+.appointment_area .appointment_info h3 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1F1F1F;
+  margin-bottom: 10px;
+}
+
+.appointment_area .appointment_info p {
+  font-size: 16px;
+  color: #727272;
+  margin-bottom: 56px;
+  margin-top: 10px;
+}
+
+.appointment_area form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.appointment_area form input,
+.appointment_area form textarea {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #C7C7C7;
+  margin-bottom: 26px;
+  padding-bottom: 7px;
+}
+
+.appointment_area form input::placeholder,
+.appointment_area form textarea::placeholder {
+  font-size: 16px;
+  color: #919191;
+  font-weight: 400;
+}
+
+.appointment_area form textarea {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.appointment_area form .appoinment_button {
+  text-align: center;
+}
+
+.contact-section {
+  padding: 130px 0 100px;
+}
+
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding: 70px 0 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .contact-section {
+    padding: 80px 0 50px;
+  }
+}
+
+.form-contact label {
+  font-size: 14px;
+}
+
+.form-contact .form-group {
+  margin-bottom: 30px;
+}
+
+.form-contact .form-control {
+  border: 1px solid #e5e6e9;
+  border-radius: 0px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 13px;
+  background: transparent;
+}
+
+.form-contact .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-contact .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+}
+
+.form-contact textarea {
+  border-radius: 0px;
+  height: 100% !important;
 }
 
 .contact-section .btn_2 {
