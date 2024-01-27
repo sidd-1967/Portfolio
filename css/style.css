@@ -1064,15 +1064,22 @@ h3 {
 /* Home page banner */
 .slider_bg_1 {
   background-image: url(../img/home_page_banner.webp);
+  border-radius: 0; 
+  padding: 20px 20px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px),
+       (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) and (max-height: 1366px),
+       (width: 912px) and (height: 1368px),
+       (width: 1024px) and (height: 600px),
+       (width: 1280px) and (height: 800px),
+       (width: 915px) and (height: 412px),
+       (width: 844px) and (height: 390px) {
   .slider_bg_1 {
     background-image: url(../img/banner/banner3.webp);
-    border-radius: 0; 
-    padding: 20px 20px !important;
   }
 }
+
 
 .slider_area {
   /* padding: 60px 60px; */
@@ -1100,6 +1107,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
   .slider_area_inner {
     height: 500px;
+    
   }
 }
 
@@ -1145,6 +1153,7 @@ h3 {
   .slider_area_inner .single_slider .slider_text h3 {
     font-size: 30px;
     line-height: 46px;
+    color: white;
     
   }
 }
@@ -1166,7 +1175,6 @@ h3 {
 .slider_area_inner .single_slider .slider_text p {
   font-size: 26px;
   font-weight: 400;
-  color: #000000;
   margin-bottom: 50px;
   margin-top: 16px;
   line-height: 32px;
