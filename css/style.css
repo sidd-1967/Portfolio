@@ -1062,14 +1062,8 @@ h3 {
 
 
 /* Home page banner */
-/* .slider_bg_1 {
-  background-image: url(../img/banner/banner3.webp);
-  border-radius: 20px;
-} */
-
 .slider_bg_1 {
-  background-image: url(../img/3d-render-code-testing-functional-test-usability.jpg);
-  border-radius: 20px;
+  background-image: url(../img/home_page_banner.webp);
 }
 
 @media (max-width: 767px) {
@@ -1130,19 +1124,16 @@ h3 {
 
 .slider_area_inner .single_slider .slider_text h3 {
   /* color: #ffffff; */
-  font-weight: 400;
+  font-weight: 700;
   font-family: "Playfair Display", serif;
-  font-size: 56px;
+  font-size: 35px;
   line-height: 68px;
   position: relative;
   z-index: 8;
-  text-transform: capitalize;
-
 }
 
 @media (max-width: 767px) {
   .slider_area_inner .single_slider .slider_text h3 {
-    font-size: 43px;
     line-height: 50px;
     color: white;
   }
