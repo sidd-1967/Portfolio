@@ -2079,6 +2079,58 @@ h3 {
   padding: 130px 0 100px;
 }
 
+/* formspree.io contact form css starts here */
+#my-form {
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: transparent;
+  color: #F2C64D;
+  display: inline-block;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  border: 1px solid #F2C64D;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 60px;
+}
+
+button:hover {
+  background: #F2C64D;
+  color: #fff !important;
+  border: 1px solid transparent;
+}
+
+#my-form-status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* formspree.io contact form css ends here */
+
+
+
+
 
 @media (max-width: 991px) {
   .contact-section {
@@ -2562,6 +2614,7 @@ h2.certificates{
 /* validation form css */
 .error-message {
   color: red;
+  margin-bottom: 20px;
 }
 
 

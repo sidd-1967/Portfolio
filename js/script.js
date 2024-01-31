@@ -60,135 +60,94 @@ function rotateCertificateImages(containerId) {
 // Enable this script with a unique function name
 setInterval(() => rotateCertificateImages('certificate'), 2000);
 
-// Thank you pop-up
-function showThankYouPopup() {
-  document.getElementById('thankYouPopup').style.display = 'block';
-}
+// Formspree Contact Valdiation Start here 
 
-function closeThankYouPopup() {
-  document.getElementById('thankYouPopup').style.display = 'none';
-}
+var form = document.getElementById("my-form");
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('contactForm').addEventListener('submit', function (event) {
-      event.preventDefault();
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
 
-      // Your validation logic here
-      if (validateForm()) {
-          showThankYouPopup();
+  try {
+    var response = await fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
 
-          // Clear the form after 5 seconds
-          setTimeout(function () {
-              document.getElementById('contactForm').reset();
-              closeThankYouPopup();
-          }, 5000);
+    if (response.ok) {
+      status.innerHTML = "Thanks for your submission!";
+      clearForm(); // Clear form fields on successful submission
+    } else {
+      var responseData = await response.json();
+      if (Object.hasOwnProperty.call(responseData, "errors")) {
+        status.innerHTML = responseData["errors"].map(
+          (error) => error["message"]
+        ).join(", ");
+      } else {
+        status.innerHTML = "Oops! There was a problem submitting your form";
       }
-  });
-});
+    }
+  } catch (error) {
+    status.innerHTML = "Oops! There was a problem submitting your form";
+  }
+}
 
 function validateForm() {
-  // Your validation logic here
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var phone = document.getElementById('phone').value;
-  var message = document.getElementById('message').value;
-
   // Reset error messages
-  document.getElementById('nameError').innerHTML = '';
-  document.getElementById('emailError').innerHTML = '';
-  document.getElementById('phoneError').innerHTML = '';
-  document.getElementById('messageError').innerHTML = '';
+  document.getElementById("emailError").innerHTML = "";
+  document.getElementById("messageError").innerHTML = "";
 
-  // Name validation
-  if (name.trim() === '') {
-      document.getElementById('nameError').innerHTML = 'Full Name cannot be blank';
-  } else if (/[^a-zA-Z\s]/.test(name)) {
-      document.getElementById('nameError').innerHTML = 'Full Name cannot contain Numbers & Special Characters';
-  } else if (name.length > 25) {
-      document.getElementById('nameError').innerHTML = 'Full Name Cannot exceed more than 25 chars';
-  }
+  // Get form values
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
 
   // Email validation
-  if (email.trim() === '') {
-      document.getElementById('emailError').innerHTML = 'Email cannot be blank';
+  if (email.trim() === "") {
+    document.getElementById("emailError").innerHTML = "Email cannot be blank";
+    return false;
   } else if (!isValidEmail(email)) {
-      document.getElementById('emailError').innerHTML = 'Invalid Email';
-  }
-
-  // Phone validation
-  if (phone.trim() === '') {
-      document.getElementById('phoneError').innerHTML = 'Phone Number cannot be blank';
-  } else if (/[^0-9]/.test(phone)) {
-      document.getElementById('phoneError').innerHTML = 'Phone number Cannot contain Alphabets & Special Characters';
-  } else if (/^[0-5]/.test(phone)) {
-      document.getElementById('phoneError').innerHTML = 'Invalid Phone Number';
+    document.getElementById("emailError").innerHTML = "Invalid Email";
+    return false;
   }
 
   // Message validation
-  if (message.trim() === '') {
-      document.getElementById('messageError').innerHTML = 'Message Field cannot be blank';
+  if (message.trim() === "") {
+    document.getElementById("messageError").innerHTML =
+      "Message Field cannot be blank";
+    return false;
   } else if (message.length > 350) {
-      document.getElementById('messageError').innerHTML = 'Message Field Cannot exceed 350 Chars';
+    document.getElementById("messageError").innerHTML =
+      "Message Field Cannot exceed 350 Chars";
+    return false;
   }
 
-  // Check if there are any validation errors
-  var errors = document.querySelectorAll('.error-message');
-  for (var i = 0; i < errors.length; i++) {
-      if (errors[i].innerHTML !== '') {
-          return false; // Validation failed
-      }
-  }
-
-  return true; // Validation passed
+  // Form is valid, allow submission
+  return true;
 }
 
+// Function to clear form fields
+function clearForm() {
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+}
+
+// Function to check valid email format
 function isValidEmail(email) {
-  // Basic email validation regex
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email);
 }
 
-function clearForm() {
-  // Clear form fields
-  document.getElementById('name').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('phone').value = '';
-  document.getElementById('message').value = '';
+// Attach the submit event listener
+form.addEventListener("submit", handleSubmit);
 
-  // Clear error messages
-  document.querySelectorAll('.error-message').forEach(function (element) {
-      element.textContent = '';
-  });
-}
-
-// document.addEventListener('contextmenu', function (e) {
-//   e.preventDefault();
-// });
+// Formspree Contact Valdiation Ends here
 
 
-// Hamburger Menu JS
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   var hamburgerMenu = document.querySelector('.hamburger-menu');
-//   var mobileMenu = document.querySelector('.mobile-menu');
-//   var menuItems = document.querySelectorAll('.mobile-menu nav a'); // Select all menu items inside the mobile menu
-
-//   hamburgerMenu.addEventListener('click', function () {
-//       toggleMenu();
-//   });
-
-//   // Add event listeners to each menu item to close the menu when clicked
-//   menuItems.forEach(function (menuItem) {
-//       menuItem.addEventListener('click', function () {
-//           toggleMenu();
-//       });
-//   });
-
-//   function toggleMenu() {
-//       hamburgerMenu.classList.toggle('opened');
-//       mobileMenu.style.left = mobileMenu.style.left === "0%" ? "-100%" : "0%";
-//   }
-// });
 document.addEventListener("DOMContentLoaded", function () {
   var hamburgerMenu = document.querySelector('.hamburger-menu');
   var mobileMenu = document.querySelector('.mobile-menu');

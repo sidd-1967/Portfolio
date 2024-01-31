@@ -443,31 +443,18 @@
         <div class="row align-items-center">
             <div class="col-xl-6 offset-xl-1 col-md-6 col-lg-6">
                     <div class="appointment_info">
-                    <form id="contactForm" action="#" method="post" enctype="text/plain">
-                        <div class="row">
-                            <div class="col-xl-6 col-md-6">
-                                <input type="text" name="Name" id="name" placeholder="Your Name">
-                                <span id="nameError" class="error-message"></span>
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <input type="email" name="Email" id="email" placeholder="Your Email">
-                                <span id="emailError" class="error-message"></span>
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <input type="tel" name="Phone" id="phone" placeholder="Phone no.">
-                                <span id="phoneError" class="error-message"></span>
-                            </div>
-                            <div class="col-xl-12">
-                                <textarea name="Message" id="message" placeholder="Message"></textarea>
-                                <span id="messageError" class="error-message"></span>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="appoinment_button">
-                                    <button class="boxed-btn5" type="submit" onclick="validateForm()">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        <form id="my-form" action="https://formspree.io/f/xvoezedb" method="POST" onsubmit="return validateForm()">
+                            <label for="email">Email:*</label>
+                            <input type="email" name="email" id="email" autocomplete="off"  required />
+                            <span id="emailError" class="error-message"></span>
+                        
+                            <label for="message">Message:*</label>
+                            <textarea name="message" id="message" rows="2" autocomplete="off"  required></textarea>
+                            <span id="messageError" class="error-message"></span>
+                        
+                            <button id="my-form-button">Submit</button>
+                            <p id="my-form-status"></p>
+                        </form>
                 </div>
             </div>
             <!-- Contact Image on the Right (for larger screens) -->
@@ -484,22 +471,6 @@
             </div>
         </div>
     </div>
-</div>
-<br>
-<div id="thankYouPopup" class="popup-container">
-    <span class="closeButton" onclick="closeThankYouPopup()"></span>
-    <div class="d-flex justify-content-center-w2c">
-        <div class="check-container">
-            <div class="check-background d-flex justify-content-center">
-                <svg viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 25L27.3077 44L58.5 7" stroke="white" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </div>
-            <div class="check-shadow"></div>
-        </div>
-    </div>    
-    <h2>Thank You!</h2>
-    <p>Your message has been submitted successfully.</p>
 </div>
 <br>
 <!-- footer_start -->
