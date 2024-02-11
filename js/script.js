@@ -34,8 +34,8 @@ function rotateImages(containerId) {
   }
 }
 
-setInterval(() => rotateImages('carrental-project'), 2000);
-setInterval(() => rotateImages('technomarket-project'), 2000);
+setInterval(() => rotateImages('carrental-project'), 3000);
+setInterval(() => rotateImages('technomarket-project'), 3000);
 
 // Add auto Scroll Functionality for Certificates Images if they are Uploaded more than 3.
 function rotateCertificateImages(containerId) {
@@ -58,7 +58,7 @@ function rotateCertificateImages(containerId) {
 }
 
 // Enable this script with a unique function name
-setInterval(() => rotateCertificateImages('certificate'), 2000);
+setInterval(() => rotateCertificateImages('certificate'), 3000);
 
 // Formspree Contact Valdiation Start here 
 
@@ -94,6 +94,8 @@ async function handleSubmit(event) {
   } catch (error) {
     status.innerHTML = "Oops! There was a problem submitting your form";
   }
+  // Attach the submit event listener
+  form.addEventListener("submit", handleSubmit);
 }
 
 function validateForm() {
@@ -141,13 +143,11 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-// Attach the submit event listener
-form.addEventListener("submit", handleSubmit);
 
 // Formspree Contact Valdiation Ends here
 
 
-
+// Mobile Hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
   var hamburgerMenu = document.querySelector('.hamburger-menu');
   var mobileMenu = document.querySelector('.mobile-menu');
@@ -183,8 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = ''; // Revert to the default scroll behavior
   }
 });
-
-
 
 document.addEventListener('gesturestart', function (e) {
   e.preventDefault();

@@ -122,7 +122,7 @@ label {
   color: #fff; /* Set your desired color, in this case, white (#fff) */
 }
 
-/* Add this to your existing styles.css or create a new one */
+/* Mobile Hamburger menu */
 .hamburger-menu {
   display: none; /* Initially hide for larger screens */
   cursor: pointer;
