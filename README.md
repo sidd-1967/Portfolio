@@ -27,5 +27,3 @@ Feel free to reach out to me via email or social media:
 
 - Email: [siddheshgovalkar1967@gmail.com](mailto:siddheshgovalkar1967@gmail.com)
 - LinkedIn: [Siddhesh Govalkar](https://www.linkedin.com/in/siddhesh-govalkar-b65a43228/)
-- Twitter: [\_sid0502\_](https://twitter.com/_sid0502_)
-- WhatsApp: [+91 8070506024](https://api.whatsapp.com/send?phone=918070506024)
