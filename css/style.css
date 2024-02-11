@@ -2196,6 +2196,7 @@ button:hover {
   background: #F2C64D;
   color: #fff !important;
   border: 1px solid transparent;
+  transition-duration: .3s;
 }
 
 #my-form-status {
@@ -2440,6 +2441,7 @@ h2.certificates{
 
 .portfolio-footer .middle a:hover {
   border-bottom: 2px solid #fff;
+  transition-duration: .3s;
 }
 
 .portfolio-footer .right a {
@@ -2692,6 +2694,83 @@ h2.certificates{
   color: red;
   margin-bottom: 20px;
 }
+
+
+
+
+.Fcard {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 2px;
+  gap: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #F2C64D;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #F2C64D;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #F2C64D;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #F2C64D;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
 
 
 /* Customize the default scrollbar for WebKit browsers */
