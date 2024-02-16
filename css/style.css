@@ -1757,212 +1757,6 @@ h3 {
 
 
 /* Contact Me */
-/* @media (max-width: 767px) {
-  .appointment_area {
-    padding-top: 100px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .appointment_area {
-    padding-bottom: 100px;
-  }
-}
-
-.appointment_area .opacity_icon {
-  position: absolute;
-  bottom: -126px;
-  z-index: -1;
-}
-
-.appointment_area .opacity_icon i {
-  font-size: 478px;
-  color: #FEFCF6;
-}
-
-
-@media (max-width: 767px) {
-  .appiontment_thumb.d-none.d-lg-block {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px){
-  .appiontment_thumb.d-none.d-lg-block {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-}
-
-
-.appointment_area .appointment_info {
-  position: relative;
-  z-index: 0;
-}
-
-@media (max-width: 767px) {
-  .appointment_area .appointment_info {
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-}
-
-.appointment_area .appointment_info h3 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #1F1F1F;
-}
-
-.appointment_area .appointment_info p {
-  font-size: 16px;
-  color: #727272;
-  margin-top: 13px;
-  margin-bottom: 56px;
-}
-
-.appointment_area form input {
-  width: 100%;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 1px solid #C7C7C7;
-  margin-bottom: 26px;
-  padding-bottom: 7px;
-}
-
-.appointment_area form input::placeholder {
-  font-size: 16px;
-  color: #919191;
-  font-weight: 400;
-}
-
-.appointment_area form textarea {
-  width: 100%;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 1px solid #C7C7C7;
-  margin-bottom: 26px;
-  padding-bottom: 7px;
-  margin-top: 50px;
-  margin-bottom: 40px;
-}
-
-.appointment_area form textarea::placeholder {
-  font-size: 16px;
-  color: #919191;
-  font-weight: 400;
-}
-
-.appointment_area form .appoinment_button button {
-  width: 100%;
-  text-align: center;
-}
-
-
-.contact-info {
-  margin-bottom: 25px;
-}
-
-.contact-info__icon {
-  margin-right: 20px;
-}
-
-.contact-info__icon i, .contact-info__icon span {
-  color: #8f9195;
-  font-size: 27px;
-}
-
-.contact-info .media-body h3 {
-  font-size: 16px;
-  margin-bottom: 0;
-  font-size: 16px;
-  color: #2a2a2a;
-}
-
-.contact-info .media-body h3 a:hover {
-  color: #ff5e13;
-}
-
-.contact-info .media-body p {
-  color: #8a8a8a;
-}
-
-.contact-title {
-  font-size: 27px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.form-contact label {
-  font-size: 14px;
-}
-
-.form-contact .form-group {
-  margin-bottom: 30px;
-}
-
-.form-contact .form-control {
-  border: 1px solid #e5e6e9;
-  border-radius: 0px;
-  height: 48px;
-  padding-left: 18px;
-  font-size: 13px;
-  background: transparent;
-}
-
-.form-contact .form-control:focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-.form-contact .form-control::placeholder {
-  font-weight: 300;
-  color: #999999;
-}
-
-.form-contact textarea {
-  border-radius: 0px;
-  height: 100% !important;
-}
-
-.contact-section {
-  padding: 130px 0 100px;
-}
-
-@media (max-width: 991px) {
-  .contact-section {
-    padding: 70px 0 40px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .contact-section {
-    padding: 80px 0 50px;
-  }
-}
-
-.contact-section .btn_2 {
-  background-color: #191d34;
-  padding: 18px 60px;
-  border-radius: 50px;
-  margin-top: 0;
-}
-
-.contact-section .btn_2:hover {
-  background-color: #ff5e13;
-}
-
-.sample-text-area {
-  background: #fff;
-  padding: 100px 0 70px 0;
-} */
-
 
 /* Adjustments for smaller screens */
 @media (max-width: 767px) {
@@ -2155,6 +1949,79 @@ h3 {
   padding: 130px 0 100px;
 }
 
+
+/* Education Section CSS Here */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 66px;
+  margin-bottom: 50px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px; 
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.card__image {
+  width: 100%;
+  height: auto;
+  background: white;
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.9); 
+  backdrop-filter: blur(3px); 
+}
+
+
 /* formspree.io contact form css starts here */
 #my-form {
   margin: auto;
@@ -2269,7 +2136,7 @@ button:hover {
   padding: 100px 0 70px 0;
 }
 
-/* Projects CSS Starts here */
+/* Personal Projects CSS Starts here */
 .project-heading {
   text-align: center;
 }
@@ -2287,25 +2154,12 @@ button:hover {
   color: #000000;
 }
 
-@media (max-width: 767px) {
-  .project-heading-2 {
-    margin-top: 40px;
-    margin-bottom: 50px;
-    font-size: 42px;
-    line-height: 48px;
-    font-weight: 700;
-    color: #000000;
-  }
-}
-
-
-.project {
+.personal-project {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   text-align: center;
-  /* box-shadow: 0px 0px 30px; */
 }
 
 .screenshots {
@@ -2332,7 +2186,51 @@ button:hover {
   pointer-events: none;
 }
 
-/* Projects CSS Ends here */
+@media (max-width: 767px) {
+  .project-heading-2 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+/* Personal Projects CSS Ends here */
+/* Profesional Projects CSS Starts here */
+
+.professional-projects {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project__details {
+  flex: 1;
+}
+
+.project__title {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.project__description {
+  margin-top: 5px;
+  color: #777;
+}
+
+
 
 /* Experience css starts */
 .project-heading-3{
