@@ -1045,7 +1045,7 @@ h3 {
 
 /* Home page banner */
 .slider_bg_1 {
-  background-image: url(../img/banner/F2.png);
+  background-image: url(../img/banner/HomeBanner.webp);
   border-radius: 0; 
   padding: 20px 20px !important;
 }
@@ -1067,7 +1067,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) and (max-height: 1366px),
        (width: 768px) and (height: 1024px) {
   .slider_bg_1 {
-    background-image: url(../img/banner/F2.png); /* Update the path to your image */
+    background-image: url(../img/banner/HomeBanner.webp); /* Update the path to your image */
   }
 }
 
