@@ -13,6 +13,13 @@ function makeHeaderSticky() {
 // Add a scroll event listener to call the function
 window.addEventListener("scroll", makeHeaderSticky);
 
+// to download resume
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("downloadButton").addEventListener("click", function() {
+      window.location.href = "https://github.com/sidd-1967/Portfolio/raw/main/resume/siddhesh-resume.pdf";
+  });
+});
+
 
 // Add auto Scroll Functionality for Project Images if they are Uploaded more than 3.
 function rotateImages(containerId) {
