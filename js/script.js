@@ -43,29 +43,8 @@ function rotateImages(containerId) {
 
 setInterval(() => rotateImages('carrental-project'), 3000);
 setInterval(() => rotateImages('technomarket-project'), 3000);
+setInterval(() => rotateImages('professional-project'), 3000);
 
-// Add auto Scroll Functionality for Certificates Images if they are Uploaded more than 3.
-function rotateCertificateImages(containerId) {
-  const screenshotsInner = document.querySelector(`#${containerId} .certificate-screenshots-inner`);
-  const screenshotWidth = screenshotsInner.firstElementChild.clientWidth;
-  const scrollAmount = screenshotWidth + 10; // Adjust this value to change the scroll distance
-  
-  const currentPosition = Math.abs(parseInt(screenshotsInner.style.transform.split('(')[1])) || 0;
-  
-  if (currentPosition >= screenshotsInner.scrollWidth - screenshotsInner.clientWidth) {
-    screenshotsInner.style.transform = 'translateX(0)';
-  } else {
-    screenshotsInner.style.transform = `translateX(-${currentPosition + scrollAmount}px)`;
-  }
-  
-  // Check if the entire images have scrolled out of the container
-  if (currentPosition >= screenshotsInner.scrollWidth) {
-    screenshotsInner.style.transform = 'translateX(0)';
-  }
-}
-
-// Enable this script with a unique function name
-setInterval(() => rotateCertificateImages('certificate'), 3000);
 
 // Formspree Contact Valdiation Start here 
 
