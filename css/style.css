@@ -2067,31 +2067,26 @@ h3 {
 
 
 /* Additional Effects for skills */
-.col-6.col-md-4.col-lg-4.col-xl-2:hover {
-  height: -webkit-calc(100% + 20px);
+
+/* Rotate icon on hover for Technical Skills */
+#skills .col-xl-12:nth-child(1) .single_loyers:hover .fab,
+#skills .col-xl-12:nth-child(1) .single_loyers:hover .fas {
+  transform: rotateY(360deg);
+  
+}
+
+/* Increase height of the yellow border on hover for Technical Skills */
+#skills .col-xl-12:nth-child(1) .col-6.col-md-4.col-lg-4.col-xl-2:hover {
   border: 1px solid #f7941d;
   border-radius: 20px;
-
 }
 
-.single_loyers {
+/* Transition effect for smooth rotation */
+#skills .col-xl-12:nth-child(1) .single_loyers .fab,
+#skills .col-xl-12:nth-child(1) .single_loyers .fas {
   transition: transform 0.3s ease;
+  
 }
-
-
-.single_loyers:hover {
-  transform: rotateY(360deg);
-  cursor: default;
-}
-
-.icon-wrapper {
-  transition: transform 0.3s ease;
-}
-
-.icon-wrapper:hover {
-  transform: rotateY(360deg);
-}
-
 
 /* formspree.io contact form css starts here */
 #my-form {
