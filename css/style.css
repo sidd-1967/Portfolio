@@ -870,7 +870,7 @@ h3 {
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   .header-area .main-header-area .main-menu ul li a {
-    padding: 38px 18px 38px 18px;
+    padding: 38px 5px 38px 18px;
   }
 }
 
