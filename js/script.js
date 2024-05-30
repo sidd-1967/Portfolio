@@ -17,7 +17,7 @@ window.addEventListener("scroll", makeHeaderSticky);
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("downloadButton").addEventListener("click", function() {
       // window.location.href = "https://github.com/sidd-1967/Portfolio/raw/main/resume/siddhesh-resume.pdf";
-      window.location.href = "https://drive.google.com/file/d/1HDbDZ6zM50YARl_QKEgORD59DSQYopvd/view?usp=sharing";
+      window.location.href = "https://drive.google.com/file/d/1-ke0weNXgkGJGfheppC3yVDAhrn6AZgf/view?usp=sharing";
   });
 });
 
