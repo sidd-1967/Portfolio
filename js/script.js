@@ -13,14 +13,6 @@ function makeHeaderSticky() {
 // Add a scroll event listener to call the function
 window.addEventListener("scroll", makeHeaderSticky);
 
-// to download resume
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("downloadButton").addEventListener("click", function() {
-      window.location.href = "https://github.com/sidd-1967/Portfolio/raw/main/resume/siddhesh-resume.pdf";
-      // window.location.href = "https://drive.google.com/file/d/1-ke0weNXgkGJGfheppC3yVDAhrn6AZgf/view?usp=sharing";
-  });
-});
-
 
 // Add auto Scroll Functionality for Project Images if they are Uploaded more than 3.
 function rotateImages(containerId) {

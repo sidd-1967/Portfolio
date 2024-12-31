@@ -2380,7 +2380,6 @@ button:hover {
     height: calc(100px) !important;
   }
 }
-/* professional projects css ends here */
 
 /* Experience css starts */
 .project-heading-3{
@@ -2455,55 +2454,168 @@ button:hover {
   font-weight: 600;
 }
 
+/* General mobile and tablet responsiveness */
 @media (max-width: 767px),
        (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) and (max-height: 1366px),
        (width: 912px) and (height: 1368px),
        (width: 1024px) and (height: 600px),
        (width: 1280px) and (height: 800px),
        (width: 915px) and (height: 412px),
-       (width: 844px) and (height: 390px) {
+       (width: 844px) and (height: 390px),
+       (width: 769px) and (height: 680px) { /* Target specific resolutions */
+  
+  /* Main experience container setup */
   .experience-container {
-    flex-direction: column; /* Change flex direction to stack elements vertically */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Horizontally center the content */
+    justify-content: center; /* Center content vertically */
+    margin-bottom: 20px; /* Add space between containers */
+    padding: 0 10px; /* Padding on the sides to prevent content from sticking */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+
+  /* Adjusting images to ensure they're centered and don't stretch */
+  .experience-image img,
+  .experience-images img {
+    width: 80%; /* Limit image width to 80% of container */
+    max-width: 300px; /* Ensure max width for larger images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners */
+    margin: 10px auto; /* Add margin and center the images */
+    display: block; /* Ensure block display for centering */
+  }
+
+  /* Experience text setup */
+  .experience-text {
+    text-align: center; /* Center text */
+    width: 100%; /* Make text container use full width */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px; /* Space above text */
+  }
+
+  /* Adjust text inside bullet points */
+  .bullet-list {
+    list-style-type: disc;
+    margin-left: 20px; /* Ensure bullets don't stick to text */
+    padding-left: 20px;
+    text-align: left; /* Align text left for bullets */
+    margin-top: 10px;
+  }
+
+  /* Experience images container */
+  .experience-images {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    margin-bottom: 20px;
+  }
+
+  /* Bullet list items styling */
+  .bullet-list li {
+    margin-bottom: 10px; /* Add space between bullet items */
+  }
+}
+
+/* General mobile, tablet, and desktop responsiveness */
+@media (max-width: 767px), /* Mobile */
+       (min-width: 768px) and (max-width: 1024px) { /* Tablet */
+
+  /* Ensure content containers are centered and have space around them */
+  .experience-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    width: 100%;
+    padding: 0 15px; /* Prevent content from sticking to edges */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-bottom: 20px; /* Space between sections */
+  }
+
+  /* Experience images setup */
+  .experience-image img,
+  .experience-images img {
+    width: 100%; /* Allow images to take full width of their container */
+    max-width: 300px; /* Max width to prevent oversized images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners */
+    margin: 10px 0; /* Add vertical margin for spacing */
+    display: block; /* Center the images */
+  }
+
+  /* Experience text setup */
+  .experience-text {
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    padding: 0 10px; /* Ensure some padding around the text */
+    margin-top: 20px; /* Space above text */
+  }
+
+  /* Bullet list inside experience text */
+  .bullet-list {
+    list-style-type: disc;
+    padding-left: 20px; /* Indent list items */
+    text-align: left; /* Align text left for clarity */
+    margin-top: 10px;
+  }
+
+  .bullet-list li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+
+  /* Flexbox adjustment for the images in experience section */
+  .experience-images {
+    width: 100%; /* Ensure images take full width */
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    margin-bottom: 20px; /* Space below images */
+  }
+
+}
+
+/* For larger tablet and smaller desktop screens */
+@media (min-width: 1024px) {
+  .experience-container {
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Space items out */
+    padding: 0 30px; /* Increase padding for larger screens */
   }
 
   .experience-image img,
   .experience-images img {
-    width: 100%; /* Make the images take up the full width */
-    height: auto; /* Ensure images maintain aspect ratio */
-    border-radius: 20px;
-    margin: 0; /* Remove any margins */
+    width: 45%; /* Limit image width to 45% for larger screen sizes */
+    max-width: 350px; /* Prevent oversized images */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .experience-text {
-    margin-top: 20px; /* Add space between the image and text */
-    margin-right: 0; /* Remove right margin */
-  }
-
-  .experience-images {
-    order: -1; /* Move the images above text */
-    margin-bottom: 20px; /* Add some space below the image */
+    width: 50%; /* Text takes up 50% of the space */
+    padding: 0 20px; /* Space around text */
   }
 }
 
-/* tablet view */
-@media (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) and (max-height: 1366px),
-       (width: 768px) and (height: 1024px) {
-    .experience-container {
-        flex-direction: column; /* Change flex direction to stack elements vertically */
-        align-items: center; /* Align items in the center horizontally */
-    }
+/* For extra-large desktop screens */
+@media (min-width: 1200px) {
+  .experience-container {
+    flex-direction: row; /* Keep items aligned horizontally */
+    justify-content: space-around; /* Spread items evenly */
+    padding: 0 50px; /* Larger padding for large screens */
+  }
 
-    .experience-image img,
-    .experience-images img {
-        width: 65%; /* Decrease image width to 65% */
-        height: auto; /* Ensure images maintain aspect ratio */
-        border-radius: 20px;
-        margin-left: 100px; /* Add some space below the image */
-    }
+  .experience-image img,
+  .experience-images img {
+    width: 100%; 
+    max-width: 400px; /* Max width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
 
-    .experience-text {
-        margin-right: 0; /* Remove right margin */
-    }
+  .experience-text {
+    width: 50%; /* Keep text at 50% */
+    padding: 0 30px; /* Padding around text */
+  }
 }
 
 /* Experience css ends */
